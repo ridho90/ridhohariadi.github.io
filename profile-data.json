@@ -1,0 +1,139 @@
+{
+  "name": "Ridho Kusumo Hariadi",
+  "location": "Auckland, New Zealand",
+  "headline": "Care-driven. Hospitality-tested. AI-augmented.",
+  "tagline": "I'm an Auckland-based healthcare and hospitality professional combining person-centered care, high-volume service operations, and AI-powered workflows to deliver safer, faster, and more human-centered outcomes.",
+  "summary": "With hands-on experience across healthcare support, mental health environments, cruise hospitality, restaurant operations, and AI-enabled productivity, I bring a rare cross-sector perspective: empathy from healthcare, discipline from hospitality, and adaptability from technology.",
+  "education": [
+    {
+      "credential": "NZ Certificate in Health and Wellbeing Level 4",
+      "institution": "Crown Institute of Studies",
+      "year": "2025–2026"
+    },
+    {
+      "credential": "Bachelor of Law (LLB)",
+      "institution": "Universitas Brawijaya",
+      "year": "2009–2013"
+    }
+  ],
+  "certifications": [
+    "IELTS General 6.0 (March 2025)",
+    "HACCP Food Safety",
+    "AIDA F&B Advanced Training — Top Class Trainee",
+    "NZ Full Class 1 Driver Licence"
+  ],
+  "skills": {
+    "healthcare": [
+      "Person-Centered Care",
+      "Cultural Safety",
+      "Electronic health documentation",
+      "Support for daily living activities",
+      "Observation, escalation, and safe communication",
+      "Diversional therapy & music engagement (guitar & vocals)",
+      "200+ clinical hours at CHT Beachhaven"
+    ],
+    "hospitality": [
+      "F&B Head Steward — AIDA Cruises",
+      "High-volume dining service (150–300 guests per shift)",
+      "Guest satisfaction score 90/100",
+      "Marine X Change POS system",
+      "Team coordination under pressure",
+      "International cruise environment (3 years)"
+    ],
+    "ai_and_tech": [
+      "Claude Code — rapid prototyping & code assistance",
+      "NotebookLM — knowledge synthesis & research",
+      "VS Code — code editing & workflow",
+      "Tailscale — secure device access",
+      "macOS automation — daily productivity"
+    ],
+    "analytical": [
+      "Technical analysis (crypto & stock markets)",
+      "Portfolio management & risk control (Binance)",
+      "Pattern recognition & structured decision-making"
+    ],
+    "mental_health": [
+      "Psycho-social support for chronic conditions",
+      "De-escalation & crisis support",
+      "Family caregiver coaching",
+      "Experience at RSJ Lawang, Indonesia"
+    ]
+  },
+  "experience": [
+    {
+      "role": "Trainee Healthcare Assistant",
+      "organization": "CHT Beachhaven",
+      "location": "Auckland, New Zealand",
+      "highlights": [
+        "200+ clinical hours in residential aged care",
+        "Person-centered care and resident wellbeing",
+        "Electronic health documentation",
+        "Mobility support and safe manual handling",
+        "Diversional therapy through music (guitar & vocals)"
+      ]
+    },
+    {
+      "role": "Mental Health Support",
+      "organization": "RSJ Lawang",
+      "location": "Indonesia",
+      "highlights": [
+        "Supported individuals with chronic schizophrenia",
+        "Psycho-social support and de-escalation",
+        "Family caregiver coaching",
+        "Calm interpersonal communication in sensitive environments"
+      ]
+    },
+    {
+      "role": "F&B Head Steward",
+      "organization": "AIDA Cruises",
+      "location": "International",
+      "highlights": [
+        "Managed dining service for 150–300 guests per shift",
+        "Promoted from Assistant to Head Steward based on performance",
+        "Consistent guest satisfaction rating of 90/100",
+        "Marine X Change POS system",
+        "HACCP food safety standards",
+        "Coordinated international team"
+      ]
+    },
+    {
+      "role": "Restaurant Manager",
+      "organization": "Warunk Laseman",
+      "highlights": [
+        "Led restaurant operations",
+        "Coordinated service teams",
+        "Customer experience management",
+        "Daily workflow quality"
+      ]
+    },
+    {
+      "role": "Casual Waiter",
+      "organization": "Ascent Premier Hotel",
+      "highlights": [
+        "Guest-facing hotel service",
+        "Adaptability and service consistency",
+        "Professional presentation"
+      ]
+    }
+  ],
+  "languages": [
+    "English (IELTS 6.0)",
+    "Indonesian (Native)",
+    "Javanese (Native)"
+  ],
+  "legal_status": "NZ Student Visa until August 2026",
+  "driving_licence": "NZ Full Class 1 Driver Licence",
+  "ai_workflow": {
+    "description": "How I use AI agents to learn faster, document better, and automate repetitive workflows.",
+    "steps": [
+      "Capture: Save lecture notes, training materials, and research into NotebookLM",
+      "Synthesize: Generate summaries, study guides, and practice questions",
+      "Prototype: Use Claude Code to build simple tools (flashcards, trackers, document templates)",
+      "Automate: macOS shortcuts for scheduling, reminders, and file organization"
+    ]
+  },
+  "contact": {
+    "email": "ridho90@gmail.com",
+    "linkedin": "https://linkedin.com/in/ridho-hariadi"
+  }
+}
