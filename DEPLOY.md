@@ -7,7 +7,7 @@ The Cloudflare Worker is live at:
 https://portfolio-agent.ridho90.workers.dev
 ```
 
-**Gemini API Key** sudah di-set sebagai secret. Saat ini free tier quota sudah terpakai untuk hari ini, tapi akan reset otomatis. Jika ingin quota lebih tinggi, upgrade ke API key dengan billing di https://aistudio.google.com/apikey
+The worker now uses DeepSeek. Store the API key only as the Cloudflare Worker secret `DEEPSEEK_API_KEY`; do not place it in frontend JavaScript or commit it to this folder.
 
 ## Step 1: Deploy Worker (Only if you need to update)
 
@@ -31,7 +31,7 @@ curl -s -X PUT \
 3. Click "Edit Code"
 4. Paste the content of `worker-service.js`
 5. Click "Save and Deploy"
-6. To update the Gemini API key: Settings → Variables → Edit `GEMINI_API_KEY`
+6. To update the DeepSeek API key: Settings → Variables → Edit `DEEPSEEK_API_KEY`
 
 ## Step 2: Worker URL
 
@@ -66,7 +66,7 @@ https://portfolio-agent.ridho90.workers.dev
 
 | Problem | Solution |
 |---------|----------|
-| AI says "not configured" | Check GEMINI_API_KEY secret is set in Cloudflare Worker |
+| AI says "not configured" | Check `DEEPSEEK_API_KEY` secret is set in Cloudflare Worker |
 | AI returns error 500 | Check Worker code for syntax errors |
 | CORS error | Worker already has CORS headers configured |
 | No response from AI | Check Worker URL in index.html matches deployed URL |

@@ -34,10 +34,10 @@ portfolio-v2/
 | Section | Konten |
 |---------|--------|
 | **A. Hero — Executive Snapshot** | Nama, lokasi, visa, licence, headline + 3 CTA + Quick Facts + foto profil |
-| **B. Bento Grid Value Proposition** | 6 kartu modular: Healthcare, Hospitality, AI/Vibe Coding, Mental Health+Law, Analytical Thinking, Credentials |
+| **B. Bento Grid Value Proposition** | 6 kartu modular: Healthcare, Hospitality, Web Design/AI/Vibe Coding, Mental Health+Law, Analytical Thinking, Credentials |
 | **C. Experience Timeline** | 5 pengalaman dengan metric badges, skill tags, expandable responsibilities |
 | **D. AI/Tech Showcase** | Automation stack + AI-Assisted Learning Workflow mini case study |
-| **E. Credentials & Proof** | Ringkasan kredensial dalam grid compact |
+| **E. Credentials & Proof** | Ringkasan kredensial dan daftar sertifikasi khusus |
 | **F. Contact + AI Agent Ready** | Email, LinkedIn, Download CV + AI assistant integration point |
 
 ### 🎨 Desain
@@ -59,7 +59,7 @@ Untuk production:
 ### 📬 Kontak
 
 - **Email:** ridho90@gmail.com
-- **LinkedIn:** linkedin.com/in/ridho-hariadi
+- **LinkedIn:** www.linkedin.com/in/ridhokusumo
 - **Lokasi:** Auckland, New Zealand
 
 ---

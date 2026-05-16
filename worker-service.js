@@ -2,10 +2,10 @@
  * Portfolio AI Assistant — Cloudflare Worker (Service Worker format)
  * 
  * Answers questions about Ridho Kusumo Hariadi's background
- * using verified profile data + Google Gemini API.
+ * using verified profile data + DeepSeek API.
  *
  * Environment variables (secrets):
- *   GEMINI_API_KEY - Your Google Gemini API key
+ *   DEEPSEEK_API_KEY - Your DeepSeek API key
  */
 
 // Embedded verified profile data
@@ -20,7 +20,14 @@ const PROFILE_DATA = {
     { credential: "Bachelor of Law (LLB)", institution: "Universitas Brawijaya", year: "2009-2013" }
   ],
   certifications: [
-    "IELTS General 6.0 (March 2025)",
+    "GEC-1000 Code of Business Conduct & Ethics - Carnival Fleet Training Academy, 2024",
+    "TRG-1715 COVID-19: Help Stop the Spread - Carnival Fleet Training Academy, 2022",
+    "TRG-2302 Environmental Awareness - Carnival Fleet Training Academy, 2024",
+    "TRG-2602 Shipboard Cybersecurity Awareness - Carnival Fleet Training Academy, 2022",
+    "Virtual Assistant - Habiskerja.com, 2023",
+    "Medicine Grand Rounds: The Economics of COVID-19 (Recorded Webinar) - Stanford University School of Medicine, 2020",
+    "Perspectives on Recovery from COVID-19 - Harvard Medical School, 2020",
+    "Special Education for Advocate Profession (PKPA) - PERADI, 2014",
     "HACCP Food Safety",
     "AIDA F&B Advanced Training - Top Class Trainee",
     "NZ Full Class 1 Driver Licence"
@@ -28,7 +35,7 @@ const PROFILE_DATA = {
   skills: {
     healthcare: ["Person-Centered Care", "Cultural Safety", "Electronic health documentation", "Support for daily living activities", "Observation, escalation, and safe communication", "Diversional therapy and music engagement", "200+ clinical hours at CHT Beachhaven"],
     hospitality: ["F&B Head Steward - AIDA Cruises", "High-volume dining service (150-300 guests per shift)", "Guest satisfaction score 90/100", "Marine X Change POS system", "Team coordination under pressure", "International cruise environment (3 years)"],
-    ai_and_tech: ["Claude Code - rapid prototyping", "NotebookLM - knowledge synthesis", "VS Code - code editing", "Tailscale - secure device access", "macOS automation - daily productivity"],
+    ai_and_tech: ["Claude Code - rapid prototyping", "NotebookLM - knowledge synthesis", "VS Code - code editing", "Tailscale - secure device access", "macOS automation - daily productivity", "Web design - portfolio and interface design"],
     analytical: ["Technical analysis (crypto and stocks)", "Portfolio management and risk control", "Pattern recognition and decisions"],
     mental_health: ["Psycho-social support", "De-escalation and crisis support", "Family caregiver coaching", "Experience at RSJ Lawang, Indonesia"]
   },
@@ -39,7 +46,7 @@ const PROFILE_DATA = {
     { role: "Restaurant Manager", organization: "Warunk Laseman", highlights: ["Led restaurant operations", "Coordinated service teams", "Customer experience management"] },
     { role: "Casual Waiter", organization: "Ascent Premier Hotel", highlights: ["Guest-facing hotel service", "Adaptability and service consistency"] }
   ],
-  contact: { email: "ridho90@gmail.com" }
+  contact: { email: "ridho90@gmail.com", linkedin: "https://www.linkedin.com/in/ridhokusumo" }
 };
 
 const SYSTEM_PROMPT = "You are a professional portfolio assistant for " + PROFILE_DATA.name + ", a healthcare, hospitality, and AI-augmented professional based in " + PROFILE_DATA.location + ". " +
@@ -83,8 +90,8 @@ async function handleRequest(request) {
       });
     }
 
-    // Get Gemini API key from environment variable
-    const apiKey = GEMINI_API_KEY;
+    // Get DeepSeek API key from environment variable
+    const apiKey = DEEPSEEK_API_KEY;
     if (!apiKey) {
       return new Response(JSON.stringify({ error: "AI assistant is not configured properly." }), {
         status: 500,
@@ -92,26 +99,24 @@ async function handleRequest(request) {
       });
     }
 
-    // Call Gemini API
+    // Call DeepSeek API
     const response = await fetch(
-      "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-lite:generateContent?key=" + apiKey,
-
-
+      "https://api.deepseek.com/chat/completions",
       {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": "Bearer " + apiKey
+        },
         body: JSON.stringify({
-          contents: [
-            {
-              role: "user",
-              parts: [{ text: SYSTEM_PROMPT + "\n\nQuestion: " + question.trim() }]
-            }
+          model: "deepseek-chat",
+          messages: [
+            { role: "system", content: SYSTEM_PROMPT },
+            { role: "user", content: question.trim() }
           ],
-          generationConfig: {
-            temperature: 0.3,
-            maxOutputTokens: 300,
-            topP: 0.8
-          }
+          temperature: 0.3,
+          max_tokens: 300,
+          top_p: 0.8
         })
       }
     );
@@ -120,10 +125,10 @@ async function handleRequest(request) {
 
     // Extract answer text
     let answer = "Sorry, I could not generate a response.";
-    if (data.candidates && data.candidates[0] && data.candidates[0].content && data.candidates[0].content.parts && data.candidates[0].content.parts[0] && data.candidates[0].content.parts[0].text) {
-      answer = data.candidates[0].content.parts[0].text;
+    if (data.choices && data.choices[0] && data.choices[0].message && data.choices[0].message.content) {
+      answer = data.choices[0].message.content;
     } else if (data.error) {
-      answer = "Error: " + data.error.message;
+      answer = "Error: " + (data.error.message || data.error);
     }
 
     return new Response(JSON.stringify({ answer: answer }), {

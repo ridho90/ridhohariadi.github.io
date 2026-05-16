@@ -2,14 +2,14 @@
  * Portfolio AI Assistant — Cloudflare Worker
  * 
  * Answers questions about Ridho Kusumo Hariadi's background
- * using verified profile data + Google Gemini API.
+ * using verified profile data + DeepSeek API.
  *
  * Environment variables (secrets):
- *   GEMINI_API_KEY - Your Google Gemini API key
+ *   DEEPSEEK_API_KEY - Your DeepSeek API key
  *
  * Deploy:
  *   wrangler deploy worker.js
- *   wrangler secret put GEMINI_API_KEY
+ *   wrangler secret put DEEPSEEK_API_KEY
  */
 
 // Embedded verified profile data
@@ -24,7 +24,14 @@ const PROFILE_DATA = {
     { credential: "Bachelor of Law (LLB)", institution: "Universitas Brawijaya", year: "2009–2013" }
   ],
   certifications: [
-    "IELTS General 6.0 (March 2025)",
+    "GEC-1000 Code of Business Conduct & Ethics — Carnival Fleet Training Academy, 2024",
+    "TRG-1715 COVID-19: Help Stop the Spread — Carnival Fleet Training Academy, 2022",
+    "TRG-2302 Environmental Awareness — Carnival Fleet Training Academy, 2024",
+    "TRG-2602 Shipboard Cybersecurity Awareness — Carnival Fleet Training Academy, 2022",
+    "Virtual Assistant — Habiskerja.com, 2023",
+    "Medicine Grand Rounds: The Economics of COVID-19 (Recorded Webinar) — Stanford University School of Medicine, 2020",
+    "Perspectives on Recovery from COVID-19 — Harvard Medical School, 2020",
+    "Special Education for Advocate Profession (PKPA) — PERADI, 2014",
     "HACCP Food Safety",
     "AIDA F&B Advanced Training — Top Class Trainee",
     "NZ Full Class 1 Driver Licence"
@@ -32,7 +39,7 @@ const PROFILE_DATA = {
   skills: {
     healthcare: ["Person-Centered Care", "Cultural Safety", "Electronic health documentation", "Support for daily living activities", "Observation, escalation, and safe communication", "Diversional therapy & music engagement (guitar & vocals)", "200+ clinical hours at CHT Beachhaven"],
     hospitality: ["F&B Head Steward — AIDA Cruises", "High-volume dining service (150–300 guests per shift)", "Guest satisfaction score 90/100", "Marine X Change POS system", "Team coordination under pressure", "International cruise environment (3 years)"],
-    ai_and_tech: ["Claude Code — rapid prototyping & code assistance", "NotebookLM — knowledge synthesis & research", "VS Code — code editing & workflow", "Tailscale — secure device access", "macOS automation — daily productivity"],
+    ai_and_tech: ["Claude Code — rapid prototyping & code assistance", "NotebookLM — knowledge synthesis & research", "VS Code — code editing & workflow", "Tailscale — secure device access", "macOS automation — daily productivity", "Web design — portfolio and interface design"],
     analytical: ["Technical analysis (crypto & stock markets)", "Portfolio management & risk control (Binance)", "Pattern recognition & structured decision-making"],
     mental_health: ["Psycho-social support for chronic conditions", "De-escalation & crisis support", "Family caregiver coaching", "Experience at RSJ Lawang, Indonesia"]
   },
@@ -47,10 +54,10 @@ const PROFILE_DATA = {
     description: "How I use AI agents to learn faster, document better, and automate repetitive workflows.",
     steps: ["Capture: Save lecture notes, training materials, and research into NotebookLM", "Synthesize: Generate summaries, study guides, and practice questions", "Prototype: Use Claude Code to build simple tools (flashcards, trackers, document templates)", "Automate: macOS shortcuts for scheduling, reminders, and file organization"]
   },
-  contact: { email: "ridho90@gmail.com", linkedin: "https://linkedin.com/in/ridho-hariadi" }
+  contact: { email: "ridho90@gmail.com", linkedin: "https://www.linkedin.com/in/ridhokusumo" }
 };
 
-// System prompt — tells Gemini to only answer from verified data
+// System prompt — tells DeepSeek to only answer from verified data
 const SYSTEM_PROMPT = `You are a professional portfolio assistant for ${PROFILE_DATA.name}, a healthcare, hospitality, and AI-augmented professional based in ${PROFILE_DATA.location}.
 
 Your purpose is to answer questions about ${PROFILE_DATA.name}'s background, skills, experience, and qualifications.
@@ -97,8 +104,8 @@ export default {
         });
       }
 
-      // Get Gemini API key from environment secret
-      const apiKey = env.GEMINI_API_KEY;
+      // Get DeepSeek API key from environment secret
+      const apiKey = env.DEEPSEEK_API_KEY;
       if (!apiKey) {
         return new Response(JSON.stringify({ error: "AI assistant is not configured properly." }), {
           status: 500,
@@ -106,24 +113,24 @@ export default {
         });
       }
 
-      // Call Gemini API
+      // Call DeepSeek API
       const response = await fetch(
-        `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`,
+        "https://api.deepseek.com/chat/completions",
         {
           method: "POST",
-          headers: { "Content-Type": "application/json" },
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${apiKey}`
+          },
           body: JSON.stringify({
-            contents: [
-              {
-                role: "user",
-                parts: [{ text: `${SYSTEM_PROMPT}\n\nQuestion: ${question.trim()}` }]
-              }
+            model: "deepseek-chat",
+            messages: [
+              { role: "system", content: SYSTEM_PROMPT },
+              { role: "user", content: question.trim() }
             ],
-            generationConfig: {
-              temperature: 0.3,
-              maxOutputTokens: 300,
-              topP: 0.8
-            }
+            temperature: 0.3,
+            max_tokens: 300,
+            top_p: 0.8
           })
         }
       );
@@ -132,10 +139,10 @@ export default {
 
       // Extract answer text
       let answer = "Sorry, I couldn't generate a response.";
-      if (data.candidates && data.candidates[0]?.content?.parts?.[0]?.text) {
-        answer = data.candidates[0].content.parts[0].text;
+      if (data.choices && data.choices[0]?.message?.content) {
+        answer = data.choices[0].message.content;
       } else if (data.error) {
-        answer = `Error: ${data.error.message}`;
+        answer = `Error: ${data.error.message || data.error}`;
       }
 
       return new Response(JSON.stringify({ answer }), {
