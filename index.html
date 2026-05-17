@@ -13,8 +13,19 @@
   <meta property="og:title" content="Ridho Hariadi - Web Design, Growth & Operator Portfolio" />
   <meta property="og:description" content="Web design portfolio backed by growth marketing, hospitality operations, healthcare empathy, and AI-assisted execution." />
   <meta property="og:image" content="https://ridhohariadi.com/images/profile.webp" />
-  <link rel="preconnect" href="https://images.unsplash.com" />
   <link rel="stylesheet" href="assets/styles.css" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Ridho Hariadi",
+      "url": "https://ridhohariadi.com/",
+      "image": "https://ridhohariadi.com/images/profile.webp",
+      "email": "mailto:ridho90@gmail.com",
+      "areaServed": "Auckland, New Zealand and remote",
+      "description": "Web design, growth-aware portfolio, local business website, and remote website collaboration."
+    }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -25,7 +36,6 @@
         <a href="index.html" aria-current="page">Home</a>
         <a href="work.html">Work</a>
         <a href="background.html">Background</a>
-        <a href="case-study.html">Case Study</a>
         <a class="nav-cta" href="contact.html">Contact</a>
       </div>
     </nav>
@@ -51,40 +61,21 @@
       <div class="hero-visual reveal">
         <div class="mockup-stage" aria-label="Interactive device mockup preview">
           <div class="mockup-controls">
-            <div class="device-tabs" role="tablist" aria-label="Device preview">
-              <button class="device-tab is-active" type="button" role="tab" aria-selected="true" data-device-tab="laptop">Laptop</button>
-              <button class="device-tab" type="button" role="tab" aria-selected="false" data-device-tab="phone">Phone</button>
+            <div class="device-tabs" aria-label="Device preview">
+              <button class="device-tab is-active" type="button" aria-pressed="true" data-device-tab="laptop">Laptop</button>
+              <button class="device-tab" type="button" aria-pressed="false" data-device-tab="phone">Phone</button>
             </div>
             <div class="control-group" aria-label="Project preview controls">
               <button class="icon-button" type="button" data-slide-action="prev" aria-label="Previous project">&lsaquo;</button>
               <button class="icon-button" type="button" data-slide-action="next" aria-label="Next project">&rsaquo;</button>
             </div>
           </div>
-          <p><strong data-slide-label>Harbour Lane Cafe</strong> <span data-slide-type>Cafe demo</span></p>
+          <p><strong data-slide-label>Fresh Soy Tempeh</strong> <span data-slide-type>Product landing page</span></p>
 
           <div class="device laptop is-active" data-device="laptop">
             <div class="screen">
               <div class="scroll-shot" tabindex="0" aria-label="Scrollable laptop website preview">
-                <div class="mock-site">
-                  <div class="mock-hero" data-mock-hero>
-                    <div>
-                      <h4 data-mock-title>Harbour Lane Cafe</h4>
-                      <p data-mock-body>Fresh brunch, local coffee, opening hours, menu and directions visible without hunting.</p>
-                    </div>
-                  </div>
-                  <div class="mock-strip">
-                    <div><strong>Open today</strong><br />7:00 AM - 3:00 PM</div>
-                    <div><strong>Location</strong><br />Auckland CBD</div>
-                    <div><strong>CTA</strong><br />View menu / directions</div>
-                  </div>
-                  <div class="mock-grid">
-                    <div class="mock-menu-card"><span>Growth</span><h4>Findable pages</h4><p>Basic SEO, clear headings, local intent and stronger calls to action.</p></div>
-                    <div class="mock-menu-card"><span>Design</span><h4>Readable menus</h4><p>Structured content instead of image-only information.</p></div>
-                    <div class="mock-menu-card"><span>Ops</span><h4>Useful details</h4><p>Hours, location, phone, booking and directions placed where customers expect them.</p></div>
-                    <div class="mock-menu-card"><span>Async</span><h4>Clean handoff</h4><p>Briefs, revisions and launch decisions documented for remote review.</p></div>
-                  </div>
-                  <div class="mock-note">A website should look credible, explain quickly, and support how people make decisions.</div>
-                </div>
+                <img class="device-shot" src="images/work/fresh-soy-tempeh.png" alt="Fresh Soy Tempeh desktop landing page preview" data-slide-desktop-image>
               </div>
             </div>
           </div>
@@ -92,24 +83,7 @@
           <div class="device phone" data-device="phone">
             <div class="screen">
               <div class="scroll-shot" tabindex="0" aria-label="Scrollable phone website preview">
-                <div class="mock-site">
-                  <div class="mock-hero" data-mock-hero>
-                    <div>
-                      <h4 data-mock-title>Harbour Lane Cafe</h4>
-                      <p data-mock-body>Fresh brunch, local coffee, opening hours, menu and directions visible without hunting.</p>
-                    </div>
-                  </div>
-                  <div class="mock-strip">
-                    <div><strong>Open</strong><br />7:00 AM - 3:00 PM</div>
-                    <div><strong>Menu</strong><br />Under 2 clicks</div>
-                    <div><strong>Map</strong><br />Directions ready</div>
-                  </div>
-                  <div class="mock-grid">
-                    <div class="mock-menu-card"><span>Mobile</span><h4>Fast scan menu</h4><p>Readable text, not flattened inside an image.</p></div>
-                    <div class="mock-menu-card"><span>Action</span><h4>Tap-friendly CTA</h4><p>Phone, booking and directions are obvious.</p></div>
-                  </div>
-                  <div class="mock-note">Mobile-first layout for customers checking details on the move.</div>
-                </div>
+                <img class="device-shot" src="images/work/fresh-soy-tempeh-phone.png" alt="Fresh Soy Tempeh mobile landing page preview" data-slide-phone-image>
               </div>
             </div>
           </div>
@@ -153,40 +127,40 @@
       <div class="section-head">
         <div>
           <p class="eyebrow">Selected work</p>
-          <h2 id="selected-work-title">Websites built around clarity and action.</h2>
+          <h2 id="selected-work-title">Real work built around clarity and action.</h2>
         </div>
         <p>Projects are presented with the problem, solution, output, and business impact so clients and hiring teams can evaluate the work quickly.</p>
       </div>
       <div class="grid-3">
         <article class="project-card reveal">
-          <div class="project-thumb" style="--thumb-image: url('https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=900&q=80')"></div>
+          <div class="project-thumb"><img src="images/work/fresh-soy-tempeh.png" alt="Fresh Soy Tempeh landing page preview"></div>
           <div>
-            <p class="eyebrow">Sanitized case study</p>
-            <h3>Local business website refresh</h3>
-            <p>A public-safe case study template for existing work where client details can be hidden until permission is confirmed.</p>
+            <p class="eyebrow">Real work</p>
+            <h3>Fresh Soy Tempeh</h3>
+            <p>A product landing page built for ordering intent, trust building, stockist discovery, and campaign tracking.</p>
           </div>
-          <div class="tag-row"><span class="tag">Responsive UI</span><span class="tag">SEO basics</span><span class="tag">Async docs</span></div>
-          <a class="button ghost" href="case-study.html">Read the template</a>
+          <div class="tag-row"><span class="tag">React</span><span class="tag">WhatsApp CTA</span><span class="tag">Meta Pixel</span></div>
+          <a class="button ghost" href="fresh-soy-tempeh.html">Read case study</a>
         </article>
         <article class="project-card reveal">
-          <div class="project-thumb" style="--thumb-image: url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=900&q=80')"></div>
+          <div class="project-thumb"><img src="images/work/mulan.png" alt="Mulan restaurant website preview"></div>
           <div>
-            <p class="eyebrow">Demo project</p>
-            <h3>Harbour Lane Cafe</h3>
-            <p>A warm cafe website concept that makes menu, hours, location and directions obvious on mobile.</p>
+            <p class="eyebrow">Real work</p>
+            <h3>Mulan</h3>
+            <p>A Malaysian restaurant website experience with menu paths, reservations, takeaway, location, and atmosphere.</p>
           </div>
-          <div class="tag-row"><span class="tag">Cafe</span><span class="tag">Mobile-first</span><span class="tag">Menu UX</span></div>
-          <a class="button ghost" href="work.html#harbour-lane">View project</a>
+          <div class="tag-row"><span class="tag">Restaurant</span><span class="tag">Static site</span><span class="tag">Local UX</span></div>
+          <a class="button ghost" href="mulan.html">Read case study</a>
         </article>
         <article class="project-card reveal">
-          <div class="project-thumb" style="--thumb-image: url('https://images.unsplash.com/photo-1555126634-323283e090fa?auto=format&fit=crop&w=900&q=80')"></div>
+          <div class="project-thumb"><img src="images/work/tbc.png" alt="Takapuna Beach Cafe website preview"></div>
           <div>
-            <p class="eyebrow">Demo project</p>
-            <h3>North Shore Noodles</h3>
-            <p>A practical takeaway website concept focused on calls, directions, menu scanning and repeat customer checks.</p>
+            <p class="eyebrow">Real work</p>
+            <h3>Takapuna Beach Cafe</h3>
+            <p>A hospitality rebuild focused on waterfront storytelling, visit planning, menu discovery, and accessibility.</p>
           </div>
-          <div class="tag-row"><span class="tag">Takeaway</span><span class="tag">Local SEO</span><span class="tag">Fast CTA</span></div>
-          <a class="button ghost" href="work.html#north-shore-noodles">View project</a>
+          <div class="tag-row"><span class="tag">Hospitality</span><span class="tag">Accessible UI</span><span class="tag">Content structure</span></div>
+          <a class="button ghost" href="tbc.html">Read case study</a>
         </article>
       </div>
     </section>
@@ -214,6 +188,6 @@
       <span><a href="mailto:ridho90@gmail.com">ridho90@gmail.com</a> &middot; <a href="https://www.linkedin.com/in/ridhokusumo">LinkedIn</a></span>
     </div>
   </footer>
-  <script src="assets/main.js"></script>
+  <script src="assets/main.js" defer></script>
 </body>
 </html>

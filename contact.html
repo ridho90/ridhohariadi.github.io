@@ -17,7 +17,6 @@
         <a href="index.html">Home</a>
         <a href="work.html">Work</a>
         <a href="background.html">Background</a>
-        <a href="case-study.html">Case Study</a>
         <a class="nav-cta" href="contact.html" aria-current="page">Contact</a>
       </div>
     </nav>
@@ -30,7 +29,51 @@
         <h1>Send the project context.</h1>
         <p class="lede">For web design, portfolio refreshes, local business websites, SEO-aware page structure, or remote collaboration, send a short brief with the current link, goal, timeline and any reference sites.</p>
       </div>
-      <div class="grid-2">
+      <div class="contact-panel reveal">
+        <form class="brief-form" data-brief-form>
+          <div class="form-row">
+            <label for="brief-name">Name</label>
+            <input id="brief-name" name="name" type="text" autocomplete="name" placeholder="Your name" />
+          </div>
+          <div class="form-row">
+            <label for="brief-email">Email</label>
+            <input id="brief-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" />
+          </div>
+          <div class="form-row">
+            <label for="brief-website">Current website or profile</label>
+            <input id="brief-website" name="website" type="url" placeholder="https://example.com" />
+          </div>
+          <div class="form-row">
+            <label for="brief-goal">Project goal</label>
+            <textarea id="brief-goal" name="goal" rows="4" placeholder="What should the website help people understand or do?"></textarea>
+          </div>
+          <div class="form-split">
+            <div class="form-row">
+              <label for="brief-audience">Target audience</label>
+              <input id="brief-audience" name="audience" type="text" placeholder="Local customers, hiring team, visitors..." />
+            </div>
+            <div class="form-row">
+              <label for="brief-timeline">Timeline</label>
+              <input id="brief-timeline" name="timeline" type="text" placeholder="Ideal launch date" />
+            </div>
+          </div>
+          <div class="form-row">
+            <label for="brief-references">Reference sites</label>
+            <textarea id="brief-references" name="references" rows="3" placeholder="Links you like or competitors to compare against"></textarea>
+          </div>
+          <div class="form-row">
+            <label for="brief-public">Can this become a public case study?</label>
+            <select id="brief-public" name="public_case">
+              <option value="Not sure yet">Not sure yet</option>
+              <option value="Yes, public case study is okay">Yes, public case study is okay</option>
+              <option value="Only sanitized details">Only sanitized details</option>
+              <option value="No, private project only">No, private project only</option>
+            </select>
+          </div>
+          <button class="button primary" type="submit">Send website brief</button>
+          <p class="form-note">This opens your email app with the brief filled in before sending.</p>
+        </form>
+        <div class="grid-2 contact-options">
         <a class="contact-tile reveal" href="mailto:ridho90@gmail.com?subject=Website%20project%20inquiry">
           <strong>Email</strong>
           <span>ridho90@gmail.com</span>
@@ -47,6 +90,7 @@
           <strong>Good first message</strong>
           <span>Share your website link, target audience, main CTA, growth goal, deadline and whether the project can be public as a case study.</span>
         </div>
+        </div>
       </div>
     </section>
   </main>
@@ -57,6 +101,6 @@
       <span><a href="mailto:ridho90@gmail.com">ridho90@gmail.com</a> &middot; <a href="https://www.linkedin.com/in/ridhokusumo">LinkedIn</a></span>
     </div>
   </footer>
-  <script src="assets/main.js"></script>
+  <script src="assets/main.js" defer></script>
 </body>
 </html>

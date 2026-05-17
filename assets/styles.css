@@ -207,6 +207,10 @@ h3 {
   margin-top: 2rem;
 }
 
+.compact-actions {
+  margin-top: 0;
+}
+
 .button {
   min-height: 3rem;
   display: inline-flex;
@@ -371,76 +375,11 @@ h3 {
   overscroll-behavior: contain;
 }
 
-.mock-site {
-  min-height: 165%;
-  background: #f8f0e4;
-  color: #211b16;
-}
-
-.mock-hero {
-  min-height: 54%;
-  display: grid;
-  place-items: end start;
-  padding: 9% 8%;
-  background:
-    linear-gradient(rgba(22, 19, 15, 0.18), rgba(22, 19, 15, 0.36)),
-    url("https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&q=80") center/cover;
-  color: white;
-}
-
-.mock-hero.takeaway {
-  background:
-    linear-gradient(rgba(17, 16, 12, 0.18), rgba(17, 16, 12, 0.4)),
-    url("https://images.unsplash.com/photo-1555126634-323283e090fa?auto=format&fit=crop&w=1200&q=80") center/cover;
-}
-
-.mock-hero h4 {
-  max-width: 9ch;
-  margin: 0 0 0.5rem;
-  font-size: clamp(2.2rem, 4.8vw, 4.8rem);
-  line-height: 0.95;
-}
-
-.mock-hero p {
-  max-width: 34rem;
-  margin: 0;
-}
-
-.mock-strip {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.7rem;
-  padding: 1rem;
-  background: #fffaf2;
-}
-
-.mock-strip div,
-.mock-menu-card,
-.mock-note {
-  border: 1px solid rgba(33, 27, 22, 0.12);
-  border-radius: 8px;
-  background: white;
-  padding: 0.85rem;
-}
-
-.mock-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-  padding: 1rem;
-}
-
-.mock-menu-card span {
-  color: #8c5530;
-  font-size: 0.78rem;
-  font-weight: 800;
-  text-transform: uppercase;
-}
-
-.mock-note {
-  margin: 0 1rem 1rem;
-  background: #213d34;
-  color: white;
+.device-shot {
+  width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  object-position: top center;
 }
 
 .mockup-controls {
@@ -517,11 +456,66 @@ h3 {
 }
 
 .project-thumb {
-  min-height: 220px;
+  aspect-ratio: 16 / 10;
   border-radius: var(--radius);
-  background:
-    linear-gradient(rgba(20, 21, 20, 0.06), rgba(20, 21, 20, 0.18)),
-    var(--thumb-image) center/cover;
+  overflow: hidden;
+  border: 1px solid rgba(20, 21, 20, 0.1);
+  background: var(--soft);
+}
+
+.project-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.case-proof {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.case-proof .metric {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel);
+}
+
+.live-preview {
+  padding: 2.6rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.preview-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.preview-head h2 {
+  margin-bottom: 0;
+}
+
+.preview-frame {
+  overflow: hidden;
+  height: min(78vh, 760px);
+  min-height: 520px;
+  border: 1px solid rgba(20, 21, 20, 0.18);
+  border-radius: var(--radius);
+  background: white;
+  box-shadow: 0 18px 45px rgba(20, 21, 20, 0.08);
+}
+
+.preview-frame iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0;
+  background: white;
 }
 
 .tag-row {
@@ -684,6 +678,59 @@ h3 {
   gap: 1rem;
 }
 
+.contact-panel {
+  display: grid;
+  gap: 1rem;
+}
+
+.brief-form {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel);
+  padding: 1.25rem;
+}
+
+.form-row {
+  display: grid;
+  gap: 0.4rem;
+  margin-bottom: 0.9rem;
+}
+
+.form-row label {
+  font-weight: 760;
+}
+
+.form-row input,
+.form-row textarea,
+.form-row select {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+  color: var(--ink);
+  padding: 0.72rem 0.78rem;
+}
+
+.form-row textarea {
+  resize: vertical;
+}
+
+.form-split {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.8rem;
+}
+
+.form-note {
+  margin: 0.85rem 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.contact-options {
+  align-items: stretch;
+}
+
 .contact-tile strong {
   display: block;
 }
@@ -728,6 +775,7 @@ h3 {
   .grid-4,
   .grid-3,
   .grid-2,
+  .form-split,
   .case-layout,
   .contact-grid {
     grid-template-columns: 1fr;
@@ -742,8 +790,17 @@ h3 {
     grid-template-columns: 1fr;
   }
 
+  .case-proof {
+    grid-template-columns: 1fr;
+  }
+
   .section-head {
     display: block;
+  }
+
+  .preview-head {
+    align-items: flex-start;
+    flex-direction: column;
   }
 
   .case-summary {
@@ -775,11 +832,6 @@ h3 {
     padding-right: 1rem;
   }
 
-  .mock-strip,
-  .mock-grid {
-    grid-template-columns: 1fr;
-  }
-
   .mockup-controls {
     align-items: flex-start;
     flex-direction: column;
@@ -787,6 +839,11 @@ h3 {
 
   .footer-inner {
     flex-direction: column;
+  }
+
+  .preview-frame {
+    height: 620px;
+    min-height: 0;
   }
 }
 

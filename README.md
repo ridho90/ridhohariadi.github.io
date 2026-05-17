@@ -19,12 +19,15 @@ portfolio-bridge/
 |-- index.html          # Homepage: hero, mockup, 4 pillars, selected work
 |-- work.html           # Project index
 |-- background.html     # Professional background and cross-sector proof
-|-- case-study.html     # Semantic case study template
+|-- fresh-soy-tempeh.html # Product landing page case study
+|-- mulan.html          # Restaurant website case study
+|-- tbc.html            # Hospitality rebuild case study
 |-- contact.html        # Email + LinkedIn contact page
 |-- assets/
 |   |-- styles.css
 |   `-- main.js
 |-- images/
+|-- previews/           # Live website previews copied from real work
 |-- sitemap.xml
 `-- robots.txt
 ```
@@ -32,5 +35,6 @@ portfolio-bridge/
 ## Notes
 
 - Plain HTML/CSS/vanilla JS.
+- Case studies include embedded live previews and full preview links.
 - No chatbot or AI worker in this version.
 - Ads/SEM/SEO claims intentionally avoid old performance metrics until verified.

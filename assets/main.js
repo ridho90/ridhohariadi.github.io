@@ -33,7 +33,7 @@ tabButtons.forEach((button) => {
     tabButtons.forEach((tab) => {
       const isActive = tab === button;
       tab.classList.toggle("is-active", isActive);
-      tab.setAttribute("aria-selected", String(isActive));
+      tab.setAttribute("aria-pressed", String(isActive));
     });
 
     devices.forEach((device) => {
@@ -44,25 +44,36 @@ tabButtons.forEach((button) => {
 
 const projectSlides = [
   {
-    name: "Harbour Lane Cafe",
-    type: "Cafe demo",
-    modifier: "",
-    title: "Harbour Lane Cafe",
-    body: "Fresh brunch, local coffee, opening hours, menu and directions visible without hunting."
+    name: "Fresh Soy Tempeh",
+    type: "Product landing page",
+    desktopImage: "images/work/fresh-soy-tempeh.png",
+    phoneImage: "images/work/fresh-soy-tempeh-phone.png",
+    desktopAlt: "Fresh Soy Tempeh desktop landing page preview",
+    phoneAlt: "Fresh Soy Tempeh mobile landing page preview"
   },
   {
-    name: "North Shore Noodles",
-    type: "Takeaway demo",
-    modifier: "takeaway",
-    title: "North Shore Noodles",
-    body: "A direct mobile-first menu site for quick orders, phone calls, hours and location checks."
+    name: "Mulan",
+    type: "Restaurant website",
+    desktopImage: "images/work/mulan.png",
+    phoneImage: "images/work/mulan-phone.png",
+    desktopAlt: "Mulan desktop restaurant website preview",
+    phoneAlt: "Mulan mobile restaurant website preview"
+  },
+  {
+    name: "Takapuna Beach Cafe",
+    type: "Hospitality rebuild",
+    desktopImage: "images/work/tbc.png",
+    phoneImage: "images/work/tbc-phone.png",
+    desktopAlt: "Takapuna Beach Cafe desktop website preview",
+    phoneAlt: "Takapuna Beach Cafe mobile website preview"
   }
 ];
 
 let currentSlide = 0;
 const slideLabel = document.querySelector("[data-slide-label]");
 const slideType = document.querySelector("[data-slide-type]");
-const mockHeroes = document.querySelectorAll("[data-mock-hero]");
+const desktopSlideImage = document.querySelector("[data-slide-desktop-image]");
+const phoneSlideImage = document.querySelector("[data-slide-phone-image]");
 
 function renderSlide() {
   const slide = projectSlides[currentSlide];
@@ -70,13 +81,15 @@ function renderSlide() {
   if (slideLabel) slideLabel.textContent = slide.name;
   if (slideType) slideType.textContent = slide.type;
 
-  mockHeroes.forEach((hero) => {
-    hero.classList.toggle("takeaway", slide.modifier === "takeaway");
-    const title = hero.querySelector("[data-mock-title]");
-    const body = hero.querySelector("[data-mock-body]");
-    if (title) title.textContent = slide.title;
-    if (body) body.textContent = slide.body;
-  });
+  if (desktopSlideImage) {
+    desktopSlideImage.src = slide.desktopImage;
+    desktopSlideImage.alt = slide.desktopAlt;
+  }
+
+  if (phoneSlideImage) {
+    phoneSlideImage.src = slide.phoneImage;
+    phoneSlideImage.alt = slide.phoneAlt;
+  }
 }
 
 document.querySelectorAll("[data-slide-action]").forEach((button) => {
@@ -90,3 +103,31 @@ document.querySelectorAll("[data-slide-action]").forEach((button) => {
 });
 
 renderSlide();
+
+const briefForm = document.querySelector("[data-brief-form]");
+
+if (briefForm) {
+  briefForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(briefForm);
+    const fields = [
+      ["Name", formData.get("name")],
+      ["Email", formData.get("email")],
+      ["Current website or profile", formData.get("website")],
+      ["Project goal", formData.get("goal")],
+      ["Target audience", formData.get("audience")],
+      ["Timeline", formData.get("timeline")],
+      ["Reference sites", formData.get("references")],
+      ["Public case study", formData.get("public_case")]
+    ];
+
+    const body = fields
+      .map(([label, value]) => `${label}:\n${String(value || "").trim() || "-"}`)
+      .join("\n\n");
+
+    const subject = encodeURIComponent("Website project brief");
+    const encodedBody = encodeURIComponent(body);
+    window.location.href = `mailto:ridho90@gmail.com?subject=${subject}&body=${encodedBody}`;
+  });
+}
