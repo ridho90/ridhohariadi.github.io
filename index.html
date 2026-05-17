@@ -1,1083 +1,219 @@
 <!doctype html>
-<html lang="en" class="dark scroll-smooth">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Ridho Kusumo Hariadi — Healthcare, Hospitality & AI Portfolio</title>
-  <meta
-    name="description"
-    content="Portfolio of Ridho Kusumo Hariadi, Auckland-based healthcare and hospitality professional combining person-centered care, high-volume operations, and AI-enabled workflows."
-  />
-  <meta name="keywords" content="Healthcare Assistant, Hospitality, AI, Vibe Coding, Auckland, Support Worker, Ridho Kusumo Hariadi" />
+  <title>Ridho Hariadi - Web Design, Growth & Operator Portfolio</title>
+  <meta name="description" content="Unified portfolio of Ridho Hariadi, an Auckland-based web designer with growth marketing, hospitality operations, healthcare empathy, and AI-assisted workflow experience." />
   <meta name="author" content="Ridho Kusumo Hariadi" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://ridhohariadi.com/" />
-
-  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://ridhohariadi.com/" />
-  <meta property="og:title" content="Ridho Kusumo Hariadi — Healthcare, Hospitality & AI Portfolio" />
-  <meta property="og:description" content="Auckland-based healthcare and hospitality professional combining person-centered care, high-volume operations, and AI-enabled workflows." />
+  <meta property="og:title" content="Ridho Hariadi - Web Design, Growth & Operator Portfolio" />
+  <meta property="og:description" content="Web design portfolio backed by growth marketing, hospitality operations, healthcare empathy, and AI-assisted execution." />
   <meta property="og:image" content="https://ridhohariadi.com/images/profile.webp" />
-  <meta property="og:image:width" content="400" />
-  <meta property="og:image:height" content="400" />
-  <meta property="og:locale" content="en_NZ" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Ridho Kusumo Hariadi — Healthcare, Hospitality & AI Portfolio" />
-  <meta name="twitter:description" content="Auckland-based healthcare and hospitality professional combining person-centered care, high-volume operations, and AI-enabled workflows." />
-  <meta name="twitter:image" content="https://ridhohariadi.com/images/profile.webp" />
-
-  <!-- JSON-LD Structured Data (Person Schema) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Ridho Kusumo Hariadi",
-    "givenName": "Ridho",
-    "familyName": "Hariadi",
-    "jobTitle": "Healthcare Assistant, Hospitality Professional & Web Designer",
-    "description": "Auckland-based healthcare and hospitality professional combining person-centered care, high-volume service operations, web design, and AI-powered workflows.",
-    "url": "https://ridhohariadi.com/",
-    "image": "https://ridhohariadi.com/images/profile.webp",
-    "email": "ridho90@gmail.com",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Auckland",
-      "addressCountry": "NZ"
-    },
-    "alumniOf": [
-      { "@type": "CollegeOrUniversity", "name": "Crown Institute of Studies" },
-      { "@type": "CollegeOrUniversity", "name": "Universitas Brawijaya" }
-    ],
-    "knowsAbout": [
-      "Healthcare Support",
-      "Person-Centered Care",
-      "Hospitality Operations",
-      "F&B Management",
-      "Web Design",
-      "AI-Assisted Workflows",
-      "Vibe Coding"
-    ],
-    "sameAs": [
-      "https://www.linkedin.com/in/ridhokusumo"
-    ]
-  }
-  </script>
-
-  <!-- Sustainability & performance:
-       For production, compile Tailwind locally instead of using CDN.
-       Keep CSS minimal and avoid heavy animation libraries. -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <script>
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          colors: {
-            surface: {
-              dark: "#0A0A0A",
-              card: "#171717",
-              soft: "#262626"
-            },
-            brand: {
-              mint: "#7DD3C7",
-              blue: "#93C5FD",
-              amber: "#FCD34D"
-            }
-          },
-          boxShadow: {
-            soft: "0 12px 40px rgba(0,0,0,0.25)"
-          }
-        }
-      }
-    };
-  </script>
-
-  <style>
-    /* Small custom CSS for accessibility and predictable rendering */
-    :focus-visible {
-      outline: 3px solid #7DD3C7;
-      outline-offset: 4px;
-      border-radius: 8px;
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      * {
-        scroll-behavior: auto !important;
-        animation-duration: 0.001ms !important;
-        transition-duration: 0.001ms !important;
-      }
-    }
-
-    /* Smooth reveal on scroll */
-    .reveal {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    }
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Profile photo styling */
-    .profile-photo {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 50%;
-    }
-  </style>
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link rel="stylesheet" href="assets/styles.css" />
 </head>
-
-<body class="bg-neutral-950 text-neutral-100 antialiased selection:bg-brand-mint selection:text-neutral-950">
-  <!-- Skip link for keyboard and screen reader users -->
-  <a
-    href="#main-content"
-    class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-xl focus:bg-brand-mint focus:px-4 focus:py-3 focus:text-sm focus:font-bold focus:text-neutral-950"
-  >
-    Skip to main content
-  </a>
-
-  <header class="sticky top-0 z-40 border-b border-white/10 bg-neutral-950/85 backdrop-blur">
-    <nav
-      class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8"
-      aria-label="Primary navigation"
-    >
-      <a href="#" class="text-sm font-semibold tracking-wide text-white">
-        Ridho KH
-      </a>
-
-      <div class="hidden items-center gap-2 md:flex" aria-label="Section links">
-        <a href="#snapshot" class="rounded-full px-3 py-2 text-sm text-neutral-300 hover:bg-white/10 hover:text-white">
-          Snapshot
-        </a>
-        <a href="#expertise" class="rounded-full px-3 py-2 text-sm text-neutral-300 hover:bg-white/10 hover:text-white">
-          Expertise
-        </a>
-        <a href="#experience" class="rounded-full px-3 py-2 text-sm text-neutral-300 hover:bg-white/10 hover:text-white">
-          Experience
-        </a>
-        <a href="#ai" class="rounded-full px-3 py-2 text-sm text-neutral-300 hover:bg-white/10 hover:text-white">
-          AI Workflow
-        </a>
-      </div>
-
-      <div class="flex items-center gap-3">
-        <button
-
-          id="themeToggle"
-          type="button"
-          class="rounded-full border border-white/15 px-3 py-2 text-sm text-neutral-200 hover:bg-white/10"
-          aria-label="Toggle light and dark theme"
-        >
-          Dark default
-        </button>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="brand" href="index.html">Ridho Hariadi <span>Design + growth operator</span></a>
+      <div class="nav-links">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="work.html">Work</a>
+        <a href="background.html">Background</a>
+        <a href="case-study.html">Case Study</a>
+        <a class="nav-cta" href="contact.html">Contact</a>
       </div>
     </nav>
   </header>
 
   <main id="main-content">
-    <!-- ============================================================
-         A. HERO SECTION — Executive Snapshot
-         ============================================================ -->
-    <section
-      id="snapshot"
-      class="mx-auto grid max-w-7xl gap-6 px-4 py-10 sm:px-6 sm:py-14 lg:grid-cols-[1.2fr_0.8fr] lg:px-8 lg:py-20"
-      aria-labelledby="hero-title"
-    >
-      <!-- Main hero card -->
-      <div class="rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 shadow-soft sm:p-8 lg:p-10">
-        <p class="mb-4 inline-flex rounded-full border border-brand-mint/30 bg-brand-mint/10 px-3 py-1 text-sm font-medium text-brand-mint">
-          Auckland, New Zealand · Healthcare · Hospitality · Web Design · AI
-        </p>
-
-        <h1
-          id="hero-title"
-          class="max-w-4xl text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl"
-        >
-          Care-driven. Hospitality-tested. AI-augmented.
-        </h1>
-
-        <p class="mt-6 max-w-3xl text-base leading-8 text-neutral-300 sm:text-lg">
-          I&rsquo;m <strong class="text-white">Ridho Kusumo Hariadi</strong>, an Auckland-based healthcare and hospitality professional combining person-centered care, high-volume service operations, web design, and AI-powered workflows to deliver safer, faster, and more human-centered outcomes.
-        </p>
-
-        <div class="mt-8 flex flex-col gap-3 sm:flex-row">
-          <a
-            href="#experience"
-            class="inline-flex items-center justify-center rounded-full bg-brand-mint px-5 py-3 text-sm font-bold text-neutral-950 transition hover:bg-teal-200"
-          >
-            View Experience
-          </a>
-
-          <a
-
-            href="mailto:ridho90@gmail.com"
-            class="inline-flex items-center justify-center rounded-full border border-white/15 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10"
-          >
-            Contact Me
-          </a>
+    <section class="section hero" aria-labelledby="hero-title">
+      <div>
+        <p class="eyebrow">Auckland based - available remote</p>
+        <h1 id="hero-title">Websites shaped by design, growth, and real operations.</h1>
+        <p class="lede">I design and build clean, responsive websites with the judgement of someone who has worked across digital marketing, hospitality operations, healthcare support, and AI-assisted workflows.</p>
+        <div class="actions">
+          <a class="button primary" href="contact.html">Contact Ridho</a>
+          <a class="button secondary" href="work.html">View Work</a>
+        </div>
+        <div class="hero-proof" aria-label="Portfolio proof points">
+          <div class="metric"><strong>2016+</strong><span>Facebook Ads, SEM and Google SEO exposure</span></div>
+          <div class="metric"><strong>90/100</strong><span>Hospitality guest satisfaction experience</span></div>
+          <div class="metric"><strong>200+</strong><span>Clinical hours supporting person-centred care</span></div>
         </div>
       </div>
 
-      <!-- Quick facts card + Profile photo -->
-      <aside
-        class="rounded-[2rem] border border-white/10 bg-neutral-900 p-6 shadow-soft sm:p-8"
-        aria-labelledby="quick-facts-title"
-      >
-        <!-- Profile photo -->
-        <div class="mb-5 flex justify-center">
-          <div class="h-24 w-24 overflow-hidden rounded-full border-2 border-brand-mint/30 sm:h-28 sm:w-28">
-            <img src="images/profile.webp" alt="Ridho Kusumo Hariadi" class="profile-photo" loading="lazy" />
+      <div class="hero-visual reveal">
+        <div class="mockup-stage" aria-label="Interactive device mockup preview">
+          <div class="mockup-controls">
+            <div class="device-tabs" role="tablist" aria-label="Device preview">
+              <button class="device-tab is-active" type="button" role="tab" aria-selected="true" data-device-tab="laptop">Laptop</button>
+              <button class="device-tab" type="button" role="tab" aria-selected="false" data-device-tab="phone">Phone</button>
+            </div>
+            <div class="control-group" aria-label="Project preview controls">
+              <button class="icon-button" type="button" data-slide-action="prev" aria-label="Previous project">&lsaquo;</button>
+              <button class="icon-button" type="button" data-slide-action="next" aria-label="Next project">&rsaquo;</button>
+            </div>
+          </div>
+          <p><strong data-slide-label>Harbour Lane Cafe</strong> <span data-slide-type>Cafe demo</span></p>
+
+          <div class="device laptop is-active" data-device="laptop">
+            <div class="screen">
+              <div class="scroll-shot" tabindex="0" aria-label="Scrollable laptop website preview">
+                <div class="mock-site">
+                  <div class="mock-hero" data-mock-hero>
+                    <div>
+                      <h4 data-mock-title>Harbour Lane Cafe</h4>
+                      <p data-mock-body>Fresh brunch, local coffee, opening hours, menu and directions visible without hunting.</p>
+                    </div>
+                  </div>
+                  <div class="mock-strip">
+                    <div><strong>Open today</strong><br />7:00 AM - 3:00 PM</div>
+                    <div><strong>Location</strong><br />Auckland CBD</div>
+                    <div><strong>CTA</strong><br />View menu / directions</div>
+                  </div>
+                  <div class="mock-grid">
+                    <div class="mock-menu-card"><span>Growth</span><h4>Findable pages</h4><p>Basic SEO, clear headings, local intent and stronger calls to action.</p></div>
+                    <div class="mock-menu-card"><span>Design</span><h4>Readable menus</h4><p>Structured content instead of image-only information.</p></div>
+                    <div class="mock-menu-card"><span>Ops</span><h4>Useful details</h4><p>Hours, location, phone, booking and directions placed where customers expect them.</p></div>
+                    <div class="mock-menu-card"><span>Async</span><h4>Clean handoff</h4><p>Briefs, revisions and launch decisions documented for remote review.</p></div>
+                  </div>
+                  <div class="mock-note">A website should look credible, explain quickly, and support how people make decisions.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="device phone" data-device="phone">
+            <div class="screen">
+              <div class="scroll-shot" tabindex="0" aria-label="Scrollable phone website preview">
+                <div class="mock-site">
+                  <div class="mock-hero" data-mock-hero>
+                    <div>
+                      <h4 data-mock-title>Harbour Lane Cafe</h4>
+                      <p data-mock-body>Fresh brunch, local coffee, opening hours, menu and directions visible without hunting.</p>
+                    </div>
+                  </div>
+                  <div class="mock-strip">
+                    <div><strong>Open</strong><br />7:00 AM - 3:00 PM</div>
+                    <div><strong>Menu</strong><br />Under 2 clicks</div>
+                    <div><strong>Map</strong><br />Directions ready</div>
+                  </div>
+                  <div class="mock-grid">
+                    <div class="mock-menu-card"><span>Mobile</span><h4>Fast scan menu</h4><p>Readable text, not flattened inside an image.</p></div>
+                    <div class="mock-menu-card"><span>Action</span><h4>Tap-friendly CTA</h4><p>Phone, booking and directions are obvious.</p></div>
+                  </div>
+                  <div class="mock-note">Mobile-first layout for customers checking details on the move.</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-
-        <h2 id="quick-facts-title" class="text-center text-xl font-bold text-white">
-          Ridho Kusumo Hariadi
-        </h2>
-
-        <dl class="mt-6 space-y-5">
-          <div>
-            <dt class="text-sm text-neutral-400">Current Education</dt>
-            <dd class="mt-1 font-medium text-white">
-              NZ Certificate in Health and Wellbeing Level 4
-            </dd>
-          </div>
-
-          <div>
-            <dt class="text-sm text-neutral-400">Previous Degree</dt>
-            <dd class="mt-1 font-medium text-white">
-              Bachelor of Law, Universitas Brawijaya
-            </dd>
-          </div>
-
-          <div>
-            <dt class="text-sm text-neutral-400">Licence</dt>
-
-            <dd class="mt-1 font-medium text-white">
-              NZ Full Class 1 Driver Licence
-            </dd>
-          </div>
-
-          <div>
-            <dt class="text-sm text-neutral-400">Certifications</dt>
-            <dd class="mt-1 font-medium text-white">
-              HACCP · AIDA F&B Advanced Training · Shipboard Cybersecurity
-            </dd>
-          </div>
-
-          <div>
-            <dt class="text-sm text-neutral-400">Location</dt>
-            <dd class="mt-1 font-medium text-white">
-              Auckland, New Zealand
-            </dd>
-          </div>
-        </dl>
-      </aside>
+      </div>
     </section>
 
-
-    <!-- ============================================================
-         B. BENTO GRID — Value Proposition
-         ============================================================ -->
-    <section
-      id="expertise"
-      class="mx-auto max-w-7xl px-4 pb-10 sm:px-6 lg:px-8"
-      aria-labelledby="expertise-title"
-    >
-      <div class="mb-6 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+    <section class="section section-tight" aria-labelledby="pillars-title">
+      <div class="section-head">
         <div>
-          <p class="text-sm font-semibold uppercase tracking-[0.25em] text-brand-mint">
-            Defensible Portfolio
-          </p>
-          <h2 id="expertise-title" class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Cross-sector strengths in one operating system.
-          </h2>
+          <p class="eyebrow">Why the work is different</p>
+          <h2 id="pillars-title">Four proof points behind the design.</h2>
         </div>
-
-        <p class="max-w-xl text-sm leading-6 text-neutral-400">
-          Designed as a layered information system: quick enough for recruiters, detailed enough for managers, and technical enough for AI-aware reviewers.
-        </p>
+        <p>The portfolio is design-first, but the judgement behind it comes from acquisition work, service operations, care environments, and AI-assisted execution.</p>
       </div>
-
-      <div class="grid grid-cols-1 gap-4 md:grid-cols-6 lg:grid-cols-12">
-        <!-- 1. Healthcare card -->
-        <article class="reveal md:col-span-3 lg:col-span-5 rounded-[1.75rem] border border-white/10 bg-white/[0.04] p-6">
-          <div class="flex items-start justify-between gap-4">
-            <div>
-              <p class="text-sm font-medium text-brand-mint">Healthcare</p>
-              <h3 class="mt-2 text-2xl font-bold text-white">
-                Person-centered care with clinical exposure.
-              </h3>
-            </div>
-            <span aria-hidden="true" class="rounded-2xl bg-brand-mint/10 px-3 py-2 text-xl">
-              ✚
-            </span>
-          </div>
-
-          <p class="mt-4 text-sm leading-7 text-neutral-300">
-            200+ clinical hours as a Trainee Healthcare Assistant at CHT Beachhaven, with focus on safety, dignity, cultural awareness, and documentation.
-          </p>
-
-          <details class="mt-5 rounded-2xl border border-white/10 bg-neutral-950/50 p-4">
-            <summary class="cursor-pointer text-sm font-semibold text-white">
-              View care competencies
-            </summary>
-            <ul class="mt-4 list-disc space-y-2 pl-5 text-sm text-neutral-300">
-              <li>Person-Centered Care</li>
-              <li>Cultural Safety</li>
-              <li>Electronic health documentation</li>
-              <li>Support for daily living activities</li>
-              <li>Observation, escalation, and safe communication</li>
-              <li>Diversional therapy & music engagement</li>
-            </ul>
-          </details>
+      <div class="grid-4">
+        <article class="card reveal">
+          <p class="eyebrow">Growth & Acquisition</p>
+          <h3>Digital marketing since 2016.</h3>
+          <p>Helped several Indonesian SMEs improve digital presence and marketing execution through Facebook Ads, SEM, and Google SEO.</p>
         </article>
-
-        <!-- 2. Hospitality card -->
-        <article class="reveal md:col-span-3 lg:col-span-4 rounded-[1.75rem] border border-white/10 bg-white/[0.04] p-6">
-          <p class="text-sm font-medium text-brand-blue">Hospitality Operations</p>
-          <h3 class="mt-2 text-2xl font-bold text-white">
-            High-volume service discipline.
-          </h3>
-
-          <p class="mt-4 text-sm leading-7 text-neutral-300">
-            Former F&B Head Steward at AIDA Cruises, serving 150&ndash;300 guests with a 90/100 satisfaction score and experience using Marine X Change POS.
-          </p>
-
-          <div class="mt-5 grid grid-cols-2 gap-3">
-            <div class="rounded-2xl bg-neutral-950/60 p-4">
-              <p class="text-2xl font-bold text-white">150&ndash;300</p>
-              <p class="mt-1 text-xs text-neutral-400">Guests served per shift</p>
-            </div>
-            <div class="rounded-2xl bg-neutral-950/60 p-4">
-              <p class="text-2xl font-bold text-white">90/100</p>
-              <p class="mt-1 text-xs text-neutral-400">Satisfaction score</p>
-            </div>
-          </div>
-
-          <details class="mt-5 rounded-2xl border border-white/10 bg-neutral-950/50 p-4">
-            <summary class="cursor-pointer text-sm font-semibold text-white">
-              View operational skills
-            </summary>
-            <ul class="mt-4 list-disc space-y-2 pl-5 text-sm text-neutral-300">
-              <li>Marine X Change POS system</li>
-              <li>High-volume dining service management</li>
-              <li>Guest experience & satisfaction focus</li>
-              <li>International cruise environment</li>
-              <li>Team coordination under pressure</li>
-            </ul>
-          </details>
+        <article class="card reveal">
+          <p class="eyebrow">Hospitality Discipline</p>
+          <h3>Built under service pressure.</h3>
+          <p>Former F&B Head Steward at AIDA Cruises, with high-volume guest service, POS exposure, HACCP discipline, and restaurant management experience.</p>
         </article>
-
-        <!-- 3. AI / Vibe Coding card -->
-        <article id="ai" class="reveal md:col-span-6 lg:col-span-3 rounded-[1.75rem] border border-brand-mint/20 bg-brand-mint/10 p-6">
-          <p class="text-sm font-medium text-brand-mint">Web Design, AI & Vibe Coding</p>
-          <h3 class="mt-2 text-2xl font-bold text-white">
-            Interface design with AI-enabled productivity.
-          </h3>
-
-          <ul class="mt-4 space-y-2 text-sm text-neutral-200">
-            <li class="flex items-start gap-2">
-              <span class="mt-0.5 text-brand-mint">&#9656;</span>
-              <span><strong>Web Design</strong> &mdash; portfolio layout, responsive UI, and presentation systems</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="mt-0.5 text-brand-mint">&#9656;</span>
-              <span><strong>Claude Code</strong> &mdash; rapid prototyping & code assistance</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="mt-0.5 text-brand-mint">&#9656;</span>
-              <span><strong>NotebookLM</strong> &mdash; knowledge synthesis & research</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="mt-0.5 text-brand-mint">&#9656;</span>
-              <span><strong>VS Code</strong> &mdash; code editing & workflow</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="mt-0.5 text-brand-mint">&#9656;</span>
-              <span><strong>Tailscale</strong> &mdash; secure device access</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="mt-0.5 text-brand-mint">&#9656;</span>
-              <span><strong>macOS automation</strong> &mdash; daily productivity</span>
-            </li>
-          </ul>
-
-          <details class="mt-5 rounded-2xl border border-brand-mint/20 bg-neutral-950/50 p-4">
-            <summary class="cursor-pointer text-sm font-semibold text-white">
-              Technical note
-            </summary>
-            <p class="mt-4 text-sm leading-6 text-neutral-300">
-              This portfolio was built using AI-assisted development (vibe coding). The AI assistant integration point is designed for a secure backend API &mdash; never expose API keys in frontend code.
-            </p>
-          </details>
+        <article class="card reveal">
+          <p class="eyebrow">Healthcare Empathy</p>
+          <h3>Accessibility starts with people.</h3>
+          <p>200+ clinical hours in aged care, person-centred support, documentation, cultural safety, and calm communication in sensitive environments.</p>
         </article>
-
-        <!-- 4. Mental health / Law background card -->
-        <article class="reveal md:col-span-3 lg:col-span-4 rounded-[1.75rem] border border-white/10 bg-white/[0.04] p-6">
-          <p class="text-sm font-medium text-brand-amber">Mental Health + Law Background</p>
-          <h3 class="mt-2 text-2xl font-bold text-white">
-            Calm communication in sensitive environments.
-          </h3>
-
-          <p class="mt-4 text-sm leading-7 text-neutral-300">
-            Experience in mental health support at RSJ Lawang, supported by a Bachelor of Law background that strengthens ethical reasoning, documentation discipline, and policy awareness.
-          </p>
-
-          <details class="mt-5 rounded-2xl border border-white/10 bg-neutral-950/50 p-4">
-            <summary class="cursor-pointer text-sm font-semibold text-white">
-              View key competencies
-            </summary>
-            <ul class="mt-4 list-disc space-y-2 pl-5 text-sm text-neutral-300">
-              <li>Psycho-social support for chronic conditions</li>
-              <li>De-escalation & crisis support</li>
-              <li>Family caregiver coaching</li>
-              <li>Ethical reasoning & policy awareness</li>
-              <li>Documentation discipline</li>
-            </ul>
-          </details>
-        </article>
-
-        <!-- 5. Analytical Thinking card -->
-        <article class="reveal md:col-span-3 lg:col-span-4 rounded-[1.75rem] border border-white/10 bg-white/[0.04] p-6">
-          <p class="text-sm font-medium text-brand-blue">Analytical Thinking</p>
-          <h3 class="mt-2 text-2xl font-bold text-white">
-            Risk-aware and data-informed.
-          </h3>
-
-          <p class="mt-4 text-sm leading-7 text-neutral-300">
-            Applies technical analysis in crypto and stock markets, including Binance portfolio management, strengthening pattern recognition, risk control, and structured decision-making.
-          </p>
-
-          <details class="mt-5 rounded-2xl border border-white/10 bg-neutral-950/50 p-4">
-            <summary class="cursor-pointer text-sm font-semibold text-white">
-              View analytical skills
-            </summary>
-            <ul class="mt-4 list-disc space-y-2 pl-5 text-sm text-neutral-300">
-              <li>Technical analysis (crypto & stocks)</li>
-              <li>Portfolio management & risk control</li>
-              <li>Pattern recognition & structured decisions</li>
-              <li>Data-informed strategy</li>
-            </ul>
-          </details>
-        </article>
-
-        <!-- 6. Credentials card -->
-        <article class="reveal md:col-span-6 lg:col-span-4 rounded-[1.75rem] border border-white/10 bg-white/[0.04] p-6">
-          <p class="text-sm font-medium text-brand-mint">Credentials</p>
-          <h3 class="mt-2 text-2xl font-bold text-white">
-            Practical training with international exposure.
-          </h3>
-
-          <ul class="mt-4 space-y-3 text-sm text-neutral-300">
-            <li class="flex items-start gap-3">
-              <span class="mt-0.5 text-brand-mint">&#10003;</span>
-              <div>
-                <span class="font-semibold text-white">NZ Certificate in Health and Wellbeing Level 4</span>
-                <span class="block text-neutral-400">&mdash; Crown Institute of Studies</span>
-              </div>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="mt-0.5 text-brand-mint">&#10003;</span>
-              <div>
-                <span class="font-semibold text-white">Bachelor of Law</span>
-                <span class="block text-neutral-400">&mdash; Universitas Brawijaya</span>
-              </div>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="mt-0.5 text-brand-mint">&#10003;</span>
-              <span>HACCP Food Safety</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="mt-0.5 text-brand-mint">&#10003;</span>
-              <span>AIDA F&B Advanced Training &mdash; Top Class Trainee</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="mt-0.5 text-brand-mint">&#10003;</span>
-              <span>NZ Full Class 1 Driver Licence</span>
-            </li>
-          </ul>
+        <article class="card reveal">
+          <p class="eyebrow">AI Workflow</p>
+          <h3>Faster iteration, clearer docs.</h3>
+          <p>Uses AI-assisted planning, prototyping, copy iteration, knowledge synthesis, and QA while keeping final outputs grounded in verified content.</p>
         </article>
       </div>
     </section>
 
-
-    <!-- ============================================================
-         C. EXPERIENCE TIMELINE
-         ============================================================ -->
-    <section
-      id="experience"
-      class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8"
-      aria-labelledby="experience-title"
-    >
-      <div class="mb-8">
-        <p class="text-sm font-semibold uppercase tracking-[0.25em] text-brand-mint">
-          Experience Timeline
-        </p>
-        <h2 id="experience-title" class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-          Built across care, service, and operations.
-        </h2>
-      </div>
-
-      <div class="space-y-4">
-        <!-- Experience 1 -->
-        <article class="reveal rounded-[1.5rem] border border-white/10 bg-white/[0.04] p-5 sm:p-6">
-          <div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
-            <div>
-              <h3 class="text-xl font-bold text-white">Trainee Healthcare Assistant</h3>
-              <p class="mt-1 text-sm text-neutral-400">CHT Beachhaven &middot; Auckland, New Zealand</p>
-            </div>
-            <span class="inline-flex items-center gap-1 rounded-full bg-brand-mint/10 px-3 py-1 text-sm font-medium text-brand-mint">
-              <span aria-hidden="true">&#9201;</span> 200+ clinical hours
-            </span>
-          </div>
-          <p class="mt-4 text-sm leading-7 text-neutral-300">
-            Supported person-centered care, resident wellbeing, safe communication, cultural safety, and electronic health documentation in a residential aged care setting.
-          </p>
-          <div class="mt-4 flex flex-wrap gap-2">
-            <span class="rounded-full border border-white/10 px-3 py-1 text-xs text-neutral-400">Personal Care</span>
-            <span class="rounded-full border border-white/10 px-3 py-1 text-xs text-neutral-400">Mobility Support</span>
-            <span class="rounded-full border border-white/10 px-3 py-1 text-xs text-neutral-400">EHR</span>
-            <span class="rounded-full border border-white/10 px-3 py-1 text-xs text-neutral-400">Cultural Safety</span>
-            <span class="rounded-full border border-white/10 px-3 py-1 text-xs text-neutral-400">Diversional Therapy</span>
-          </div>
-          <details class="mt-4">
-            <summary class="cursor-pointer text-xs font-medium text-neutral-400 hover:text-white">
-              Key responsibilities
-            </summary>
-            <ul class="mt-3 list-disc space-y-1 pl-5 text-sm text-neutral-300">
-              <li>Assisted residents with showering, grooming, hygiene, and toileting</li>
-              <li>Mobility support and transfer assistance using safe manual handling techniques</li>
-              <li>Documented daily notes and handovers in electronic health records</li>
-              <li>Provided diversional therapy through music (guitar & vocals)</li>
-              <li>Communicated changes in resident condition promptly to registered nurses</li>
-            </ul>
-          </details>
-        </article>
-
-        <!-- Experience 2 -->
-        <article class="reveal rounded-[1.5rem] border border-white/10 bg-white/[0.04] p-5 sm:p-6">
-          <div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
-            <div>
-              <h3 class="text-xl font-bold text-white">Mental Health Support</h3>
-              <p class="mt-1 text-sm text-neutral-400">RSJ Lawang &middot; Indonesia</p>
-            </div>
-            <span class="inline-flex items-center gap-1 rounded-full bg-brand-amber/10 px-3 py-1 text-sm font-medium text-brand-amber">
-              <span aria-hidden="true">&#9888;</span> Crisis support trained
-            </span>
-          </div>
-          <p class="mt-4 text-sm leading-7 text-neutral-300">
-            Gained experience in mental health environments requiring patience, empathy, observation, and calm interpersonal communication while supporting individuals with chronic schizophrenia.
-          </p>
-          <div class="mt-4 flex flex-wrap gap-2">
-            <span class="rounded-full border border-white/10 px-3 py-1 text-xs text-neutral-400">Psycho-social Support</span>
-            <span class="rounded-full border border-white/10 px-3 py-1 text-xs text-neutral-400">De-escalation</span>
-            <span class="rounded-full border border-white/10 px-3 py-1 text-xs text-neutral-400">Family Coaching</span>
-          </div>
-        </article>
-
-        <!-- Experience 3 -->
-        <article class="reveal rounded-[1.5rem] border border-white/10 bg-white/[0.04] p-5 sm:p-6">
-          <div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
-            <div>
-              <h3 class="text-xl font-bold text-white">F&B Head Steward</h3>
-              <p class="mt-1 text-sm text-neutral-400">AIDA Cruises</p>
-            </div>
-            <span class="inline-flex items-center gap-1 rounded-full bg-brand-blue/10 px-3 py-1 text-sm font-medium text-brand-blue">
-              <span aria-hidden="true">&#9733;</span> 90/100 satisfaction
-            </span>
-          </div>
-          <p class="mt-4 text-sm leading-7 text-neutral-300">
-            Managed high-volume dining service for 150&ndash;300 guests per shift, supported guest experience, used Marine X Change POS, and maintained operational standards in an international cruise environment over 3 years.
-          </p>
-          <div class="mt-4 flex flex-wrap gap-2">
-            <span class="rounded-full border border-white/10 px-3 py-1 text-xs text-neutral-400">Marine X Change POS</span>
-            <span class="rounded-full border border-white/10 px-3 py-1 text-xs text-neutral-400">HACCP</span>
-            <span class="rounded-full border border-white/10 px-3 py-1 text-xs text-neutral-400">Guest Service</span>
-            <span class="rounded-full border border-white/10 px-3 py-1 text-xs text-neutral-400">Team Leadership</span>
-            <span class="rounded-full border border-white/10 px-3 py-1 text-xs text-neutral-400">Multilingual</span>
-          </div>
-          <details class="mt-4">
-            <summary class="cursor-pointer text-xs font-medium text-neutral-400 hover:text-white">
-              Key responsibilities
-            </summary>
-            <ul class="mt-3 list-disc space-y-1 pl-5 text-sm text-neutral-300">
-              <li>Managed dining service for 150&ndash;300 guests per shift</li>
-              <li>Promoted from Assistant to Head Steward based on performance</li>
-              <li>Achieved guest satisfaction rating of 90/100 consistently</li>
-              <li>Maintained HACCP food safety standards</li>
-              <li>Coordinated with international team across departments</li>
-            </ul>
-          </details>
-        </article>
-
-        <!-- Experience 4 -->
-        <article class="reveal rounded-[1.5rem] border border-white/10 bg-white/[0.04] p-5 sm:p-6">
-          <div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
-            <div>
-              <h3 class="text-xl font-bold text-white">Restaurant Manager</h3>
-              <p class="mt-1 text-sm text-neutral-400">Warunk Laseman</p>
-            </div>
-            <span class="inline-flex items-center gap-1 rounded-full border border-white/10 px-3 py-1 text-sm text-neutral-400">
-              Operations
-            </span>
-          </div>
-          <p class="mt-4 text-sm leading-7 text-neutral-300">
-            Led restaurant operations, coordinated service teams, handled customer experience, and maintained daily workflow quality in a fast-paced dining environment.
-          </p>
-          <div class="mt-4 flex flex-wrap gap-2">
-            <span class="rounded-full border border-white/10 px-3 py-1 text-xs text-neutral-400">Team Coordination</span>
-            <span class="rounded-full border border-white/10 px-3 py-1 text-xs text-neutral-400">Customer Experience</span>
-            <span class="rounded-full border border-white/10 px-3 py-1 text-xs text-neutral-400">Shift Management</span>
-          </div>
-        </article>
-
-        <!-- Experience 5 -->
-        <article class="reveal rounded-[1.5rem] border border-white/10 bg-white/[0.04] p-5 sm:p-6">
-          <div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
-            <div>
-              <h3 class="text-xl font-bold text-white">Casual Waiter</h3>
-              <p class="mt-1 text-sm text-neutral-400">Ascent Premier Hotel</p>
-            </div>
-            <span class="inline-flex items-center gap-1 rounded-full border border-white/10 px-3 py-1 text-sm text-neutral-400">
-              Hotel Service
-            </span>
-          </div>
-          <p class="mt-4 text-sm leading-7 text-neutral-300">
-            Delivered guest-facing service in a hotel environment, strengthening adaptability, presentation, and service consistency.
-          </p>
-          <div class="mt-4 flex flex-wrap gap-2">
-            <span class="rounded-full border border-white/10 px-3 py-1 text-xs text-neutral-400">Guest Service</span>
-            <span class="rounded-full border border-white/10 px-3 py-1 text-xs text-neutral-400">Adaptability</span>
-            <span class="rounded-full border border-white/10 px-3 py-1 text-xs text-neutral-400">Service Consistency</span>
-          </div>
-        </article>
-      </div>
-    </section>
-
-
-    <!-- ============================================================
-         D. AI / TECH SHOWCASE
-         ============================================================ -->
-    <section
-      class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8"
-      aria-labelledby="ai-showcase-title"
-    >
-      <div class="rounded-[2rem] border border-brand-mint/20 bg-gradient-to-br from-brand-mint/[0.08] to-white/[0.02] p-6 sm:p-8 lg:p-10">
-        <div class="mb-8">
-          <p class="text-sm font-semibold uppercase tracking-[0.25em] text-brand-mint">
-            AI & Tech Showcase
-          </p>
-          <h2 id="ai-showcase-title" class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            How I use AI agents to learn faster, document better, and automate repetitive workflows.
-          </h2>
-          <p class="mt-4 max-w-3xl text-sm leading-7 text-neutral-300">
-            What sets me apart from other candidates is not just my cross-sector experience, but how I leverage modern AI tools to multiply my effectiveness.
-          </p>
+    <section class="section section-tight" aria-labelledby="selected-work-title">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Selected work</p>
+          <h2 id="selected-work-title">Websites built around clarity and action.</h2>
         </div>
-
-        <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-          <!-- Tool 1 -->
-          <div class="rounded-2xl border border-white/10 bg-neutral-950/60 p-5">
-            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-mint/20 text-brand-mint">
-              <span class="text-lg font-bold">CL</span>
-            </div>
-            <h3 class="mt-4 font-semibold text-white">Claude Code</h3>
-            <p class="mt-2 text-xs leading-6 text-neutral-400">
-              Rapid prototyping of automation scripts, data analysis tools, and workflow enhancements. Used to build this portfolio&rsquo;s interactive components.
-            </p>
-          </div>
-
-          <!-- Tool 2 -->
-          <div class="rounded-2xl border border-white/10 bg-neutral-950/60 p-5">
-            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-blue/20 text-brand-blue">
-              <span class="text-lg font-bold">NL</span>
-            </div>
-            <h3 class="mt-4 font-semibold text-white">NotebookLM</h3>
-            <p class="mt-2 text-xs leading-6 text-neutral-400">
-              Knowledge synthesis from multiple sources. Used to consolidate healthcare training materials, research papers, and certification content into actionable summaries.
-            </p>
-          </div>
-
-          <!-- Tool 3 -->
-          <div class="rounded-2xl border border-white/10 bg-neutral-950/60 p-5">
-            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-amber/20 text-brand-amber">
-              <span class="text-lg font-bold">VS</span>
-            </div>
-            <h3 class="mt-4 font-semibold text-white">VS Code</h3>
-            <p class="mt-2 text-xs leading-6 text-neutral-400">
-              Primary code editor for technical workflow, documentation, and automation projects. Integrated with AI assistants for real-time code and content support.
-            </p>
-          </div>
-
-          <!-- Tool 4 -->
-          <div class="rounded-2xl border border-white/10 bg-neutral-950/60 p-5">
-            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-mint/20 text-brand-mint">
-              <span class="text-lg font-bold">TS</span>
-            </div>
-            <h3 class="mt-4 font-semibold text-white">Tailscale + macOS</h3>
-            <p class="mt-2 text-xs leading-6 text-neutral-400">
-              Secure device mesh for accessing files and tools across devices. Combined with macOS automation for daily productivity shortcuts.
-            </p>
-          </div>
-        </div>
-
-        <!-- AI Workflow Mini Case Study -->
-        <div class="mt-6 rounded-2xl border border-white/10 bg-neutral-950/60 p-5">
-          <h3 class="font-semibold text-white">&#9889; AI-Assisted Learning Workflow</h3>
-          <ol class="mt-4 space-y-3 text-sm text-neutral-300">
-            <li class="flex gap-3">
-              <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-mint/20 text-xs font-bold text-brand-mint">1</span>
-              <span><strong class="text-white">Capture:</strong> Save lecture notes, training materials, and research into NotebookLM</span>
-            </li>
-            <li class="flex gap-3">
-              <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-mint/20 text-xs font-bold text-brand-mint">2</span>
-              <span><strong class="text-white">Synthesize:</strong> Generate summaries, study guides, and practice questions</span>
-            </li>
-            <li class="flex gap-3">
-              <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-mint/20 text-xs font-bold text-brand-mint">3</span>
-              <span><strong class="text-white">Prototype:</strong> Use Claude Code to build simple tools (flashcards, trackers, document templates)</span>
-            </li>
-            <li class="flex gap-3">
-              <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-mint/20 text-xs font-bold text-brand-mint">4</span>
-              <span><strong class="text-white">Automate:</strong> macOS shortcuts for scheduling, reminders, and file organization</span>
-            </li>
-          </ol>
-        </div>
+        <p>Projects are presented with the problem, solution, output, and business impact so clients and hiring teams can evaluate the work quickly.</p>
       </div>
-    </section>
-
-
-    <!-- ============================================================
-         E. CREDENTIALS & CERTIFICATIONS
-         ============================================================ -->
-    <section
-      class="mx-auto max-w-7xl px-4 pb-8 sm:px-6 lg:px-8"
-      aria-labelledby="credentials-title"
-    >
-      <div class="rounded-[2rem] border border-white/10 bg-white/[0.03] p-6 sm:p-8">
-        <div class="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+      <div class="grid-3">
+        <article class="project-card reveal">
+          <div class="project-thumb" style="--thumb-image: url('https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=900&q=80')"></div>
           <div>
-            <p class="text-sm font-semibold uppercase tracking-[0.25em] text-brand-mint">
-              Credentials & Proof
-            </p>
-            <h2 id="credentials-title" class="mt-2 text-2xl font-bold text-white sm:text-3xl">
-              Education, certifications & practical training.
-            </h2>
+            <p class="eyebrow">Sanitized case study</p>
+            <h3>Local business website refresh</h3>
+            <p>A public-safe case study template for existing work where client details can be hidden until permission is confirmed.</p>
           </div>
-        </div>
-
-
-        <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          <div class="rounded-xl border border-white/10 bg-neutral-950/50 p-4">
-            <p class="text-xs text-neutral-400">Qualification</p>
-            <p class="mt-1 text-sm font-medium text-white">NZ Certificate in Health & Wellbeing L4</p>
-            <p class="text-xs text-neutral-500">Crown Institute of Studies &middot; 2025&ndash;2026</p>
+          <div class="tag-row"><span class="tag">Responsive UI</span><span class="tag">SEO basics</span><span class="tag">Async docs</span></div>
+          <a class="button ghost" href="case-study.html">Read the template</a>
+        </article>
+        <article class="project-card reveal">
+          <div class="project-thumb" style="--thumb-image: url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=900&q=80')"></div>
+          <div>
+            <p class="eyebrow">Demo project</p>
+            <h3>Harbour Lane Cafe</h3>
+            <p>A warm cafe website concept that makes menu, hours, location and directions obvious on mobile.</p>
           </div>
-          <div class="rounded-xl border border-white/10 bg-neutral-950/50 p-4">
-            <p class="text-xs text-neutral-400">Degree</p>
-            <p class="mt-1 text-sm font-medium text-white">Bachelor of Law (LLB)</p>
-            <p class="text-xs text-neutral-500">Universitas Brawijaya &middot; 2009&ndash;2013</p>
+          <div class="tag-row"><span class="tag">Cafe</span><span class="tag">Mobile-first</span><span class="tag">Menu UX</span></div>
+          <a class="button ghost" href="work.html#harbour-lane">View project</a>
+        </article>
+        <article class="project-card reveal">
+          <div class="project-thumb" style="--thumb-image: url('https://images.unsplash.com/photo-1555126634-323283e090fa?auto=format&fit=crop&w=900&q=80')"></div>
+          <div>
+            <p class="eyebrow">Demo project</p>
+            <h3>North Shore Noodles</h3>
+            <p>A practical takeaway website concept focused on calls, directions, menu scanning and repeat customer checks.</p>
           </div>
-          <div class="rounded-xl border border-white/10 bg-neutral-950/50 p-4">
-            <p class="text-xs text-neutral-400">Certifications</p>
-            <p class="mt-1 text-sm font-medium text-white">HACCP &middot; AIDA Advanced Training &middot; Shipboard Cybersecurity</p>
-            <p class="text-xs text-neutral-500">Food safety, cruise service, and security awareness</p>
-          </div>
-          <div class="rounded-xl border border-white/10 bg-neutral-950/50 p-4">
-            <p class="text-xs text-neutral-400">Digital Skill</p>
-            <p class="mt-1 text-sm font-medium text-white">Web Design & Virtual Assistant</p>
-            <p class="text-xs text-neutral-500">Portfolio UI and remote workflow support</p>
-          </div>
-        </div>
-
-        <div class="mt-8 rounded-2xl border border-white/10 bg-neutral-950/50 p-5">
-          <h3 class="text-lg font-semibold text-white">Certification List</h3>
-          <div class="mt-5 grid gap-3 md:grid-cols-2">
-            <div class="rounded-xl border border-white/10 bg-white/[0.03] p-4">
-              <p class="text-sm font-medium text-white">GEC-1000 Code of Business Conduct &amp; Ethics</p>
-              <p class="mt-1 text-xs text-neutral-400">Carnival Fleet Training Academy &middot; 2024</p>
-            </div>
-            <div class="rounded-xl border border-white/10 bg-white/[0.03] p-4">
-              <p class="text-sm font-medium text-white">TRG-1715 COVID-19: Help Stop the Spread</p>
-              <p class="mt-1 text-xs text-neutral-400">Carnival Fleet Training Academy &middot; 2022</p>
-            </div>
-            <div class="rounded-xl border border-white/10 bg-white/[0.03] p-4">
-              <p class="text-sm font-medium text-white">TRG-2302 Environmental Awareness</p>
-              <p class="mt-1 text-xs text-neutral-400">Carnival Fleet Training Academy &middot; 2024</p>
-            </div>
-            <div class="rounded-xl border border-white/10 bg-white/[0.03] p-4">
-              <p class="text-sm font-medium text-white">TRG-2602 Shipboard Cybersecurity Awareness</p>
-              <p class="mt-1 text-xs text-neutral-400">Carnival Fleet Training Academy &middot; 2022</p>
-            </div>
-            <div class="rounded-xl border border-white/10 bg-white/[0.03] p-4">
-              <p class="text-sm font-medium text-white">Virtual Assistant</p>
-              <p class="mt-1 text-xs text-neutral-400">Habiskerja.com &middot; 2023</p>
-            </div>
-            <div class="rounded-xl border border-white/10 bg-white/[0.03] p-4">
-              <p class="text-sm font-medium text-white">Medicine Grand Rounds: The Economics of COVID-19 (Recorded Webinar)</p>
-              <p class="mt-1 text-xs text-neutral-400">Stanford University School of Medicine &middot; 2020</p>
-            </div>
-            <div class="rounded-xl border border-white/10 bg-white/[0.03] p-4">
-              <p class="text-sm font-medium text-white">Perspectives on Recovery from COVID-19</p>
-              <p class="mt-1 text-xs text-neutral-400">Harvard Medical School &middot; 2020</p>
-            </div>
-            <div class="rounded-xl border border-white/10 bg-white/[0.03] p-4">
-              <p class="text-sm font-medium text-white">Special Education for Advocate Profession (PKPA)</p>
-              <p class="mt-1 text-xs text-neutral-400">PERADI &middot; 2014</p>
-            </div>
-          </div>
-        </div>
+          <div class="tag-row"><span class="tag">Takeaway</span><span class="tag">Local SEO</span><span class="tag">Fast CTA</span></div>
+          <a class="button ghost" href="work.html#north-shore-noodles">View project</a>
+        </article>
       </div>
     </section>
 
-
-    <!-- ============================================================
-         F. CONTACT + AI ASSISTANT INTEGRATION POINT
-         ============================================================ -->
-    <section
-      class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8"
-      aria-labelledby="contact-title"
-    >
-      <div class="rounded-[2rem] border border-brand-mint/20 bg-gradient-to-br from-brand-mint/10 to-white/[0.03] p-6 sm:p-8 lg:p-10">
-        <div class="grid gap-8 lg:grid-cols-2">
-          <!-- Contact info -->
-          <div>
-            <p class="text-sm font-semibold uppercase tracking-[0.25em] text-brand-mint">
-              Get In Touch
-            </p>
-
-            <h2 id="contact-title" class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              Let&rsquo;s connect.
-            </h2>
-
-            <p class="mt-4 max-w-lg text-sm leading-7 text-neutral-300">
-              Whether you have a job opportunity, want to discuss a collaboration, or just want to connect &mdash; I&rsquo;d love to hear from you.
-            </p>
-
-            <div class="mt-8 space-y-4">
-              <a
-                href="mailto:ridho90@gmail.com"
-                class="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-4 transition hover:bg-white/[0.06]"
-              >
-                <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-mint/20 text-lg text-brand-mint">
-                  &#9993;
-                </span>
-                <div>
-                  <p class="text-sm font-medium text-white">Email</p>
-                  <p class="text-sm text-neutral-400">ridho90@gmail.com</p>
-                </div>
-              </a>
-
-              <a
-                href="https://www.linkedin.com/in/ridhokusumo"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-4 transition hover:bg-white/[0.06]"
-              >
-                <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-blue/20 text-lg text-brand-blue">
-                  in
-                </span>
-                <div>
-                  <p class="text-sm font-medium text-white">LinkedIn</p>
-                  <p class="text-sm text-neutral-400">www.linkedin.com/in/ridhokusumo</p>
-                </div>
-              </a>
-            </div>
-
-          </div>
-
-          <!-- AI Assistant section -->
-          <div>
-            <p class="text-sm font-semibold uppercase tracking-[0.25em] text-brand-mint">
-              AI Agent Ready
-            </p>
-
-            <h3 class="mt-2 text-2xl font-bold text-white sm:text-3xl">
-              Ask a verified AI assistant about my background.
-            </h3>
-
-            <p class="mt-4 text-sm leading-7 text-neutral-300">
-              This portfolio can include a lightweight AI assistant connected to a secure API. It should answer only from verified sources such as CV, certificates, project notes, and work samples.
-            </p>
-
-            <div class="mt-6 rounded-2xl border border-white/10 bg-neutral-950/60 p-5">
-              <label for="agentQuestion" class="block text-sm font-medium text-white">
-                Example question
-              </label>
-
-              <div class="mt-3 flex flex-col gap-3 sm:flex-row">
-                <input
-                  id="agentQuestion"
-                  type="text"
-                  class="min-h-12 flex-1 rounded-full border border-white/10 bg-neutral-900 px-4 text-sm text-white placeholder:text-neutral-500"
-                  placeholder="What makes Ridho suitable for healthcare support roles?"
-                />
-
-                <button
-                  type="button"
-                  id="askAgentButton"
-                  class="rounded-full bg-brand-mint px-5 py-3 text-sm font-bold text-neutral-950 hover:bg-teal-200"
-                >
-                  Ask AI
-                </button>
-              </div>
-
-              <p id="agentResponse" class="mt-4 text-sm leading-6 text-neutral-300" aria-live="polite">
-                AI response will appear here when connected to your secure backend API.
-              </p>
-            </div>
-          </div>
+    <section class="section section-tight" aria-labelledby="workflow-title">
+      <div class="grid-2">
+        <div>
+          <p class="eyebrow">Workflow</p>
+          <h2 id="workflow-title">Remote-friendly design and delivery.</h2>
+          <p class="lede">I combine clear page strategy, fast prototyping, growth-aware content, and documented handoff so remote collaborators can review decisions without long meetings.</p>
         </div>
-
-
-        <!--
-          AI AGENT INTEGRATION NOTE:
-
-          Recommended architecture:
-          Frontend -> /api/portfolio-agent -> RAG system -> verified documents only
-
-          Do NOT expose OpenAI/Anthropic/DeepSeek API keys in frontend JavaScript.
-          Use a serverless function, backend API, or edge function.
-
-          Suggested verified knowledge sources:
-          - CV
-          - Certificates
-          - Work history
-          - Case studies
-          - Public LinkedIn profile
-          - Selected portfolio notes
-        -->
+        <div class="process-list">
+          <div class="process-item"><h3>Clarify the business job</h3><p>Define audience, conversion path, search intent, proof points, and what must be understood in 30 seconds.</p></div>
+          <div class="process-item"><h3>Prototype the interface</h3><p>Build responsive static pages and interactive mockups that show the actual customer experience.</p></div>
+          <div class="process-item"><h3>Document the case</h3><p>Turn decisions into semantic case studies with problem, solution, output, and impact.</p></div>
+          <div class="process-item"><h3>Ship a maintainable site</h3><p>Keep the stack simple, fast, accessible, and easy to update after launch.</p></div>
+        </div>
       </div>
     </section>
   </main>
 
-
-  <!-- ============================================================
-       FOOTER
-       ============================================================ -->
-  <footer class="border-t border-white/10 px-4 py-8 sm:px-6 lg:px-8">
-    <div class="mx-auto flex max-w-7xl flex-col gap-3 text-sm text-neutral-400 sm:flex-row sm:items-center sm:justify-between">
-      <p>
-        &copy; <span id="currentYear"></span> Ridho Kusumo Hariadi. Built for speed, accessibility, and low-carbon browsing.
-      </p>
-
-      <div class="flex gap-4">
-        <a href="mailto:ridho90@gmail.com" class="hover:text-white">
-          Email
-        </a>
-        <a href="https://www.linkedin.com/in/ridhokusumo" target="_blank" rel="noopener noreferrer" class="hover:text-white">
-          LinkedIn
-        </a>
-      </div>
-
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>&copy; <span data-current-year></span> Ridho Kusumo Hariadi</span>
+      <span><a href="mailto:ridho90@gmail.com">ridho90@gmail.com</a> &middot; <a href="https://www.linkedin.com/in/ridhokusumo">LinkedIn</a></span>
     </div>
   </footer>
-
-
-  <!-- ============================================================
-       JAVASCRIPT — Minimal, inline, no external dependencies
-       ============================================================ -->
-  <script>
-    const htmlElement = document.documentElement;
-    const themeToggle = document.getElementById("themeToggle");
-    const currentYear = document.getElementById("currentYear");
-    const askAgentButton = document.getElementById("askAgentButton");
-    const agentQuestion = document.getElementById("agentQuestion");
-    const agentResponse = document.getElementById("agentResponse");
-
-    // Set current year
-    currentYear.textContent = new Date().getFullYear();
-
-    // Dark mode toggle (default is dark for OLED sustainability)
-    themeToggle.addEventListener("click", () => {
-      htmlElement.classList.toggle("dark");
-
-      const isDark = htmlElement.classList.contains("dark");
-      themeToggle.textContent = isDark ? "Dark default" : "Light mode";
-      themeToggle.setAttribute(
-        "aria-label",
-        isDark ? "Switch to light theme" : "Switch to dark theme"
-      );
-    });
-
-    // Real AI Agent integration — calls Cloudflare Worker backend
-    // Worker URL will be set after deployment
-    const WORKER_URL = "https://portfolio-agent.ridho90.workers.dev";
-
-
-    askAgentButton.addEventListener("click", async () => {
-      const question = agentQuestion.value.trim();
-
-      if (!question) {
-        agentResponse.textContent = "Please enter a question first.";
-        return;
-      }
-
-      agentResponse.textContent = "Thinking...";
-      askAgentButton.disabled = true;
-      askAgentButton.textContent = "Asking...";
-
-      try {
-        const response = await fetch(WORKER_URL, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify({ question })
-        });
-
-        if (!response.ok) {
-          throw new Error("AI assistant request failed");
-        }
-
-        const data = await response.json();
-
-        if (data.answer) {
-          agentResponse.textContent = data.answer;
-        } else if (data.error) {
-          agentResponse.textContent = "Error: " + data.error;
-        } else {
-          agentResponse.textContent = "Sorry, I couldn't generate a response.";
-        }
-      } catch (error) {
-        agentResponse.textContent = "Sorry, the AI assistant is currently unavailable. Please try again later or email ridho90@gmail.com.";
-      } finally {
-        askAgentButton.disabled = false;
-        askAgentButton.textContent = "Ask AI";
-      }
-    });
-
-    // Allow Enter key to submit question
-    agentQuestion.addEventListener("keydown", (e) => {
-      if (e.key === "Enter") {
-        askAgentButton.click();
-      }
-    });
-
-
-    // Scroll reveal animation using Intersection Observer
-    const revealElements = document.querySelectorAll(".reveal");
-
-    const revealObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
-    );
-
-    revealElements.forEach((el) => revealObserver.observe(el));
-  </script>
+  <script src="assets/main.js"></script>
 </body>
 </html>
