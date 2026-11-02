@@ -1,0 +1,78 @@
+Raw_Row,Customer_ID,Issue,Treatment,Next_Action
+13,C0280,Missing address,Left blank,Request from source owner
+14,C0267,Missing email,Left blank,Request verified contact detail
+26,C0324,Missing email,Left blank,Request verified contact detail
+28,C0457,Missing email,Left blank,Request verified contact detail
+37,C0221,ambiguous MM/DD vs DD/MM date,Date left blank in clean export,Confirm original date convention
+47,C0400,Missing email,Left blank,Request verified contact detail
+52,C0311,Missing address,Left blank,Request from source owner
+56,C0125,Missing address,Left blank,Request from source owner
+72,C0286,Missing email,Left blank,Request verified contact detail
+80,C0218,Missing address,Left blank,Request from source owner
+81,C0187,Missing address,Left blank,Request from source owner
+83,C0172,Missing email,Left blank,Request verified contact detail
+101,C0435,Missing address,Left blank,Request from source owner
+102,C0221,Duplicate Customer_ID,Excluded from unique customer export,Review source record if financial values conflict
+113,C0143,Duplicate Customer_ID,Excluded from unique customer export,Review source record if financial values conflict
+115,C0248,Missing email,Left blank,Request verified contact detail
+117,C0063,Missing address,Left blank,Request from source owner
+123,C0156,Missing address,Left blank,Request from source owner
+126,C0065,Duplicate Customer_ID,Excluded from unique customer export,Review source record if financial values conflict
+129,C0153,Missing email,Left blank,Request verified contact detail
+131,C0115,Missing email,Left blank,Request verified contact detail
+132,C0156,Duplicate Customer_ID,Excluded from unique customer export,Review source record if financial values conflict
+142,C0286,Duplicate Customer_ID,Excluded from unique customer export,Review source record if financial values conflict
+143,C0078,Duplicate Customer_ID,Excluded from unique customer export,Review source record if financial values conflict
+150,C0020,Missing email,Left blank,Request verified contact detail
+151,C0381,Missing email,Left blank,Request verified contact detail
+164,C0011,ambiguous MM/DD vs DD/MM date,Date left blank in clean export,Confirm original date convention
+172,C0077,Missing email,Left blank,Request verified contact detail
+174,C0466,Missing address,Left blank,Request from source owner
+178,C0373,Missing address,Left blank,Request from source owner
+186,C0438,Missing email,Left blank,Request verified contact detail
+202,C0338,Duplicate Customer_ID,Excluded from unique customer export,Review source record if financial values conflict
+206,C0039,Missing email,Left blank,Request verified contact detail
+212,C0032,Missing address,Left blank,Request from source owner
+224,C0312,Duplicate Customer_ID,Excluded from unique customer export,Review source record if financial values conflict
+229,C0351,Duplicate Customer_ID,Excluded from unique customer export,Review source record if financial values conflict
+231,C0134,Missing email,Left blank,Request verified contact detail
+246,C0404,Missing address,Left blank,Request from source owner
+249,C0299,Duplicate Customer_ID,Excluded from unique customer export,Review source record if financial values conflict
+251,C0229,Missing email,Left blank,Request verified contact detail
+270,C0260,Duplicate Customer_ID,Excluded from unique customer export,Review source record if financial values conflict
+275,C0419,Missing email,Left blank,Request verified contact detail
+290,C0191,Missing email,Left blank,Request verified contact detail
+311,C0001,Missing email,Left blank,Request verified contact detail
+311,C0001,Missing address,Left blank,Request from source owner
+312,C0403,ambiguous MM/DD vs DD/MM date,Date left blank in clean export,Confirm original date convention
+328,C0377,Duplicate Customer_ID,Excluded from unique customer export,Review source record if financial values conflict
+339,C0111,ambiguous MM/DD vs DD/MM date,Date left blank in clean export,Confirm original date convention
+361,C0096,Missing email,Left blank,Request verified contact detail
+365,C0094,Missing address,Left blank,Request from source owner
+374,C0091,Duplicate Customer_ID,Excluded from unique customer export,Review source record if financial values conflict
+380,C0364,Duplicate Customer_ID,Excluded from unique customer export,Review source record if financial values conflict
+381,C0071,ambiguous MM/DD vs DD/MM date,Date left blank in clean export,Confirm original date convention
+382,C0362,Missing email,Left blank,Request verified contact detail
+396,C0182,Duplicate Customer_ID,Excluded from unique customer export,Review source record if financial values conflict
+397,C0026,Duplicate Customer_ID,Excluded from unique customer export,Review source record if financial values conflict
+404,C0052,Duplicate Customer_ID,Excluded from unique customer export,Review source record if financial values conflict
+412,C0249,Missing address,Left blank,Request from source owner
+416,C0321,ambiguous MM/DD vs DD/MM date,Date left blank in clean export,Confirm original date convention
+417,C0104,Duplicate Customer_ID,Excluded from unique customer export,Review source record if financial values conflict
+426,C0210,Missing email,Left blank,Request verified contact detail
+430,C0305,Missing email,Left blank,Request verified contact detail
+433,C0058,Missing email,Left blank,Request verified contact detail
+435,C0390,Duplicate Customer_ID,Excluded from unique customer export,Review source record if financial values conflict
+441,C0343,Missing email,Left blank,Request verified contact detail
+446,C0273,Duplicate Customer_ID,Excluded from unique customer export,Review source record if financial values conflict
+452,C0130,Duplicate Customer_ID,Excluded from unique customer export,Review source record if financial values conflict
+457,C0247,Duplicate Customer_ID,Excluded from unique customer export,Review source record if financial values conflict
+461,C0234,Duplicate Customer_ID,Excluded from unique customer export,Review source record if financial values conflict
+465,C0195,Duplicate Customer_ID,Excluded from unique customer export,Review source record if financial values conflict
+469,C0208,Duplicate Customer_ID,Excluded from unique customer export,Review source record if financial values conflict
+475,C0342,Missing address,Left blank,Request from source owner
+492,C0039,Duplicate Customer_ID,Excluded from unique customer export,Review source record if financial values conflict
+493,C0169,Duplicate Customer_ID,Excluded from unique customer export,Review source record if financial values conflict
+496,C0013,Duplicate Customer_ID,Excluded from unique customer export,Review source record if financial values conflict
+497,C0117,Duplicate Customer_ID,Excluded from unique customer export,Review source record if financial values conflict
+499,C0325,Duplicate Customer_ID,Excluded from unique customer export,Review source record if financial values conflict
