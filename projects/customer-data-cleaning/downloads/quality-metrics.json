@@ -1,0 +1,46 @@
+{
+  "raw_rows": 500,
+  "unique_customers": 470,
+  "duplicates_excluded": 30,
+  "review_queue_items": 77,
+  "missing_email_unique": 25,
+  "ambiguous_registration_dates": 6,
+  "cities": {
+    "Yogyakarta": 44,
+    "Bandung": 37,
+    "Denpasar": 31,
+    "Jakarta": 89,
+    "Bogor": 35,
+    "Surabaya": 70,
+    "Semarang": 37,
+    "Malang": 82,
+    "Makassar": 28,
+    "Medan": 17
+  },
+  "spend_total": 1197969255,
+  "synthetic": true,
+  "generated": "2026-11-02",
+  "unique_customers_definition": "Distinct Customer_ID values, not verified real people",
+  "missing_address_unique": 16,
+  "review_issue_counts": {
+    "Missing address": 16,
+    "Missing email": 25,
+    "ambiguous MM/DD vs DD/MM date": 6,
+    "Duplicate Customer_ID": 30
+  },
+  "affected_ids": 72,
+  "unresolved_ids": 46,
+  "duplicate_spend_conflicts": 0,
+  "date_policy": "Generator-specific: YYYY-MM-DD, DD-MM-YYYY, MM/DD/YYYY; literal 03/04/2026 quarantined. Not a general ambiguity detector.",
+  "source_sha256": {
+    "DEPLOY_README.md": "6a543d516e4400dddfeeb451539219eeea7d5a549aee0df09b04cca3dac7e5e6",
+    "build.py": "6abb197713d88a1a363a9f6bf60c840bd9f88ed0b15c198dbf7e67f9db42ac14",
+    "cleaned_customer_data.csv": "0958ac0ba032af1c45bf368dd69e5bd86917f8615166e66eb4def2107e98a9c4",
+    "customer_data_cleaning_workbook.xlsx": "f53fe1f6a619d16e88a70d21a223ea12fff40dd0371df102b40098e82f416eee",
+    "index.html": "71eccf74dc7fb772d772b2021b8d318f14a0efbbada06b959278c8c2b9f1017f",
+    "portfolio_case_study.pdf": "0bbac5a7d5051620980c891d731e4f3f99ffdcab8783118eef8f6742183f71a9",
+    "quality_metrics.json": "9ff0f2919f93b58bc7a9bfbe2943a006975197b2afd7dd4927a10e361a7eb22b",
+    "raw_customer_data.csv": "31b31e7495c8ef0b23462e607483050edd69a0bc17b74cabb341bd5c8b9c3a4a",
+    "review_queue.csv": "da7b5979945c004500d62a7de2e598eb08de3b7ab2dbb462d12c9a8541f549f4"
+  }
+}
