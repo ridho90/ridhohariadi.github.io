@@ -59,3 +59,16 @@ No push, PR, merge, publication, hosting change or DNS write performed. Live hom
 A separate read-only code review found no Critical or Important issues. Its minor suggestion to enforce an exact public review-queue header allowlist was implemented. All ten city bar counts/proportions and all four review bar counts/proportions were also checked against the metric snapshot. Text contrast ratios include body 5.69:1, eyebrow 5.68:1 and ink 11.34:1. Olive large heading text is 4.43:1 (large text threshold 3:1); dark-panel labels and decorative arrows also meet applicable contrast requirements. Offscreen mobile table cells use the same checked palette. Existing homepage photo-overlay contrast remains a baseline manual-review limitation. HTTP checks compare downloaded bytes to local files, not only response status.
 
 The final staged-file check caught CRLF CSV line endings and PDF text classification. CSV exporter now emits LF; .gitattributes classifies PDF files as binary. Data values and PDF rendering are unchanged. The staged diff is checked again before commit.
+
+## Recruiter navigation follow-up — 5 November 2026
+
+- Confirmed the original feature is already on production `main` at `5ab13401265b156d73df9eeceeb0ab469197064b`; the older feature branch is not an additional unpublished release.
+- Renamed shared navigation to Projects so both website and data work have a consistent label. Updated the project index heading and introduction.
+- Added a clearly labelled practice-project entry and evidence link to the career summary. Employment history, qualifications, target roles and dataset figures are unchanged.
+- Added View evidence, a short demonstrated-skills line, direct navigation to role relevance, and a public Python source link on the case study.
+- New scoped CSS has a content-versioned filename. Existing CSS stays available for cached pages.
+- Expanded the existing checker to all nine primary pages; repeated HTTP destinations are checked once per run with a 20-second request timeout.
+- Local `npm test` passed: two cleaning-rule unit tests plus published metrics, CSV/queue definitions, links, anchors and asset checks. `git diff --check` passed.
+- Browser verification: career-summary evidence link reaches the case study; View evidence reaches downloads. Desktop case, 375px mobile case and 768px tablet projects visually inspected. Both responsive documents have matching client/scroll widths (360/360 and 753/753, excluding scrollbars); images load successfully. Mobile menu opens and Escape closes it.
+- Browser console inspection found extension metadata errors originating in chrome-extension:// only; no application-origin errors were observed in that inspection.
+- Original unredacted source files are not in this repository, so the original workbook/source audit was not rerun. No PDF, CSV or metrics output was modified.

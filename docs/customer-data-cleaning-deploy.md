@@ -1,5 +1,11 @@
 # Customer Data Cleaning: deployment handoff
 
+## Production status — 5 November 2026
+
+The original customer-data feature is published on `main` at commit `5ab13401265b156d73df9eeceeb0ab469197064b`. GitHub Pages run `41642250563` completed successfully. The case study was opened and visually checked on the custom domain. The original local-only handoff below is retained as historical context.
+
+The follow-up improves recruiter navigation, connects the practice project to the career summary, adds direct evidence and source-code paths, and extends the site checker to nine primary pages. Dataset exports, audit metrics and PDF content are unchanged.
+
 This change is prepared locally on `feat/customer-data-cleaning`, based on `origin/main`. Do not deploy the repository default `master`: its content is obsolete and differs from the live site.
 
 ## Change scope

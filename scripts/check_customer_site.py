@@ -63,11 +63,15 @@ def check(base_url=None):
     assert len({r['Customer_ID'] for r in queue if r['Issue'] != 'Duplicate Customer_ID'}) == m['unresolved_ids']
     assert set(clean[0]) == {'Customer_ID','City','Registration_Date','Last_Purchase_Date','Total_Spent','Missing_Email','Missing_Address'}
     assert set(queue[0]) == {'Raw_Row','Customer_ID','Issue','Treatment','Next_Action'}
-    for path in [CASE / 'index.html', ROOT / 'index.html', ROOT / 'work.html']:
+    checked_http = set()
+    pages = [CASE / 'index.html', *[ROOT / name for name in (
+        'index.html', 'work.html', 'background.html', 'career-summary.html',
+        'contact.html', 'mulan.html', 'fresh-soy-tempeh.html', 'tbc.html')]]
+    for path in pages:
         page = Page(path)
         if path == CASE / 'index.html':
             assert page.metrics == {k:m[k] for k in ['raw_rows','unique_customers','duplicates_excluded','review_queue_items']}
-        else:
+        elif path.name in ('index.html', 'work.html', 'career-summary.html'):
             assert 'projects/customer-data-cleaning/' in page.targets
         for target in page.targets:
             parts = urlsplit(target)
@@ -81,11 +85,12 @@ def check(base_url=None):
             assert dest.is_file(), f'Missing target: {target}'
             if parts.fragment:
                 assert parts.fragment in Page(dest).ids, f'Broken fragment: {target}'
-            if base_url:
+            if base_url and dest not in checked_http:
                 url = base_url.rstrip('/') + '/' + str(dest.relative_to(ROOT))
-                with urlopen(url) as response:
+                with urlopen(url, timeout=20) as response:
                     assert response.status == 200, f'HTTP failure: {target}'
                     assert response.read() == dest.read_bytes(), f'HTTP content mismatch: {target}'
+                checked_http.add(dest)
     print('PASS: metrics, public CSV/queue, contact omission, internal links, fragments and assets' + ('; all HTTP 200' if base_url else ''))
 
 

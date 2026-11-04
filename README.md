@@ -12,14 +12,15 @@ GitHub Pages publishes the root of the `main` branch. The repository default bra
 - `background.html`: selected experience, education, and training.
 - `career-summary.html`: printable career overview; browser Print / Save as PDF.
 - `contact.html`: email, clipboard action with manual-copy fallback, and LinkedIn.
-- `work.html`: selected digital portfolio.
+- `work.html`: customer data and website projects.
+- `projects/customer-data-cleaning/`: synthetic customer-data case study, audited metrics, and contact-free downloads.
 - `mulan.html`, `fresh-soy-tempeh.html`, `tbc.html`: project case studies, screenshots, and interactive previews.
 - `case-study.html`: legacy template URL redirects to the project index.
 - `previews/`: retained interactive project websites.
 
 ## Implementation
 
-Buildless HTML, CSS, and vanilla JavaScript. No dependency install or build step is required. Main-page styling and navigation are in `assets/styles.css` and `assets/main.js`. Project previews keep their existing assets.
+Buildless HTML, CSS, and vanilla JavaScript. No dependency install or build step is required. Main-page styling and navigation use the versioned `assets/recruiter-*.css` and `assets/recruiter-*.js` referenced by each page. Customer-data styling uses its own versioned stylesheet. Preserve the older files for cached pages. Project previews keep their existing assets.
 
 ## Content
 
